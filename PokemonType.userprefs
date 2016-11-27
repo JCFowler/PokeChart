@@ -4,15 +4,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType\SendData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType\Resources\drawable\clickable.xml">
     <Files>
-      <File FileName="PokemonType\MainActivity.cs" Line="60" Column="41" />
-      <File FileName="PokemonType\Pokemon.cs" Line="7" Column="3" />
-      <File FileName="PokemonType\Enums.cs" Line="1" Column="1" />
-      <File FileName="PokemonType\Colors.cs" Line="6" Column="21" />
-      <File FileName="PokemonType\AttackTypeChart.txt" Line="18" Column="15" />
-      <File FileName="PokemonType\TypeDetailActivity.cs" Line="23" Column="4" />
-      <File FileName="PokemonType\SendData.cs" Line="6" Column="17" />
+      <File FileName="PokemonType\MainActivity.cs" Line="82" Column="45" />
+      <File FileName="PokemonType\TypeDetailActivity.cs" Line="34" Column="4" />
+      <File FileName="PokemonType\SendData.cs" Line="9" Column="53" />
+      <File FileName="PokemonType\Resources\drawable\clickable.xml" Line="37" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />

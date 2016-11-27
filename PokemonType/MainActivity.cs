@@ -5,17 +5,27 @@ using System.IO;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Android.Graphics;
+using Android.Views.Animations;
+using Android.Graphics.Drawables;
+using Android.Graphics.Drawables.Shapes;
+using Android.Views;
 
 namespace PokemonType
 {
 	[Activity(Label = "PokemonType", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
+		bool leftTurn = true;
+		GradientDrawable gradient;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
-
 			SetContentView(Resource.Layout.Main);
+
+			TextView left = FindViewById<TextView>(Resource.Id.topLeft);
+			TextView right = FindViewById<TextView>(Resource.Id.topRight);
+			Button goBtn = FindViewById<Button>(Resource.Id.go);
+
 			TextView textView1 = FindViewById<TextView>(Resource.Id.textView1);
 			TextView textView2 = FindViewById<TextView>(Resource.Id.textView2);
 			TextView textView3 = FindViewById<TextView>(Resource.Id.textView3);
@@ -49,24 +59,101 @@ namespace PokemonType
 				textViews[i].Tag = i;
 				textViews[i].Text = types[i].type;
 				textViews[i].Gravity = Android.Views.GravityFlags.Center;
-				textViews[i].SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[types[i].type]));
-				string weakness = "";
-				for (int j = 0; j < types[i].resistance.Count; j++)
-				{
-					if (j == 0)
-						weakness = types[i].resistance[j];
-					else
-						weakness += ", " + types[i].resistance[j];
-				}
-				textViews[i].Click += (sender, e) =>
+
+				gradient = (GradientDrawable)textViews[i].Background;
+				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[i].type]));
+
+				textViews[i].Click += (sender, e) => 
 				{
 					int num = (int)((TextView)sender).Tag;
-					SendData.sendType = types[num];
-					StartActivity(typeof(TypeDetailActivity));
+
+					gradient = (GradientDrawable)textViews[num].Background;
+
+					//GradientDrawable drawable = new GradientDrawable(
+					//	GradientDrawable.Orientation.BottomTop, new int[] { Color.ParseColor(Colors.TypeToColor[types[num].type]), Color.Blue
+					//});
+					//textViews[num].Background = drawable;
+
+					int delete = -1;
+					for (int j = 0; j < SendData.sendType.Count; j++)
+					{
+						if (SendData.typeNum[j] == num)
+							delete = j;
+					}
+
+					if (delete != -1)
+					{
+						if (delete == 1)
+							removeTop(right, 1);
+						else if (delete == 0 && SendData.sendType.Count == 2)
+							removeTop(left, 0);
+						
+						else if (delete == 0 && SendData.sendType.Count == 1 && right.Text != "")
+							removeTop(right, 0);
+						else
+							removeTop(left, 0);
+					}
+					else
+					{
+						gradient.SetColor(Color.Aqua);
+
+						if (left.Text == "")
+						{
+							left.Text = types[num].type;
+							left.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[left.Text]));
+							SendData.sendType.Add(types[num]);
+							SendData.typeNum.Add(num);
+						}
+						else if (right.Text == "")
+						{
+							right.Text = types[num].type;
+							right.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[right.Text]));
+							SendData.sendType.Add(types[num]);
+							SendData.typeNum.Add(num);
+						}
+						else if (leftTurn)
+						{
+							left.Text = types[num].type;
+							left.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[left.Text]));
+							leftTurn = false;
+							gradient = (GradientDrawable)textViews[SendData.typeNum[0]].Background;
+							gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[SendData.typeNum[0]].type]));
+							SendData.typeNum[0] = num;
+							SendData.sendType[0] = types[num];
+						}
+						else if (!leftTurn)
+						{
+							right.Text = types[num].type;
+							right.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[right.Text]));
+							leftTurn = true;
+							gradient = (GradientDrawable)textViews[SendData.typeNum[1]].Background;
+							gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[SendData.typeNum[1]].type]));
+							SendData.typeNum[1] = num;
+							SendData.sendType[1] = types[num];
+						}
+					}
 				};
 			}
+			goBtn.Click += (sender, e) =>
+			{
+				if (SendData.sendType != null)
+				{
+					StartActivity(typeof(TypeDetailActivity));
+				}
+				else
+					Toast.MakeText(this, "Nothing slected", ToastLength.Short).Show();
+			};
 		}
 
+		public void removeTop(TextView top, int space)
+		{
+			gradient.SetColor(Color.ParseColor(Colors.TypeToColor[top.Text]));
+			top.Text = "";
+			top.SetBackgroundColor(Color.Transparent);
+
+			SendData.typeNum.RemoveAt(space);
+			SendData.sendType.RemoveAt(space);
+		}
 		public string getColor(string type)
 		{
 			string color = "";

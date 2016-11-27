@@ -25,9 +25,12 @@ namespace PokemonType
 			TextView resistance = FindViewById<TextView>(Resource.Id.resistance);
 			TextView immune = FindViewById<TextView>(Resource.Id.immune);
 
-			weakness.Text = createString(SendData.sendType.effective);
-			resistance.Text = createString(SendData.sendType.resistance);
-			immune.Text = createString(SendData.sendType.immune);
+			for (int i = 0; i < SendData.sendType.Count; i++)
+			{
+				weakness.Text += createString(SendData.sendType[i].effective);
+				resistance.Text += createString(SendData.sendType[i].resistance);
+				immune.Text += createString(SendData.sendType[i].immune);
+			}
 		}
 
 		public string createString(List<string> list)

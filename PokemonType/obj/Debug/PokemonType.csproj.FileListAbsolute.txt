@@ -98,5 +98,7 @@ D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\obj\Debug\an
 D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\obj\Debug\res\layout\type_detail_layout.xml
+D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\obj\Debug\res\values\styles.xml
+D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\obj\Debug\res\drawable\clickable.xml
 D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\obj\Debug\PokemonType.dll.mdb
 D:\User\Documents\XamarinProjects\BitBucket\pokemontype\PokemonType\bin\Debug\PokemonType.dll.mdb
