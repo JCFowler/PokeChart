@@ -11,27 +11,31 @@ public final class R {
     public static final class attr {
     }
     public static final class id {
-        public static final int btn1=0x7f050000;
-        public static final int btn10=0x7f050009;
-        public static final int btn11=0x7f05000a;
-        public static final int btn12=0x7f05000b;
-        public static final int btn13=0x7f05000c;
-        public static final int btn14=0x7f05000d;
-        public static final int btn15=0x7f05000e;
-        public static final int btn16=0x7f05000f;
-        public static final int btn17=0x7f050010;
-        public static final int btn18=0x7f050011;
-        public static final int btn2=0x7f050001;
-        public static final int btn3=0x7f050002;
-        public static final int btn4=0x7f050003;
-        public static final int btn5=0x7f050004;
-        public static final int btn6=0x7f050005;
-        public static final int btn7=0x7f050006;
-        public static final int btn8=0x7f050007;
-        public static final int btn9=0x7f050008;
+        public static final int immune=0x7f050014;
+        public static final int resistance=0x7f050013;
+        public static final int textView1=0x7f050000;
+        public static final int textView10=0x7f050009;
+        public static final int textView11=0x7f05000a;
+        public static final int textView12=0x7f05000b;
+        public static final int textView13=0x7f05000c;
+        public static final int textView14=0x7f05000d;
+        public static final int textView15=0x7f05000e;
+        public static final int textView16=0x7f05000f;
+        public static final int textView17=0x7f050010;
+        public static final int textView18=0x7f050011;
+        public static final int textView2=0x7f050001;
+        public static final int textView3=0x7f050002;
+        public static final int textView4=0x7f050003;
+        public static final int textView5=0x7f050004;
+        public static final int textView6=0x7f050005;
+        public static final int textView7=0x7f050006;
+        public static final int textView8=0x7f050007;
+        public static final int textView9=0x7f050008;
+        public static final int weakness=0x7f050012;
     }
     public static final class layout {
         public static final int main=0x7f030000;
+        public static final int type_detail_layout=0x7f030001;
     }
     public static final class mipmap {
         public static final int icon=0x7f020000;
