@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType\Enums.cs">
+    <Files>
+      <File FileName="PokemonType\MainActivity.cs" Line="50" Column="26" />
+      <File FileName="PokemonType\Pokemon.cs" Line="7" Column="3" />
+      <File FileName="PokemonType\Enums.cs" Line="6" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />
+</Properties>

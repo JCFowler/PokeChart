@@ -1,0 +1,4 @@
+PokemonType.MainActivity, PokemonType;md582b91813162591e19c8e1a468a917724.MainActivity
+PokemonType.MainActivity, PokemonType, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md582b91813162591e19c8e1a468a917724.MainActivity
+PokemonType.MainActivity;md582b91813162591e19c8e1a468a917724.MainActivity
+pokemontype.MainActivity;md582b91813162591e19c8e1a468a917724.MainActivity
