@@ -99,9 +99,9 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "PokemonType.dll" comes first in this list. */
 		"PokemonType.dll",
+		"System.Runtime.dll",
 		"Newtonsoft.Json.dll",
 		"System.Threading.dll",
-		"System.Runtime.dll",
 		"System.Collections.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Diagnostics.Debug.dll",

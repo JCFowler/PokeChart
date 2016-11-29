@@ -16,6 +16,7 @@ namespace PokemonType
 	[Activity(Label = "TypeDetailActivity")]
 	public class TypeDetailActivity : Activity
 	{
+		List<Type> types;
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);

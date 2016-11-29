@@ -14,9 +14,11 @@ public final class R {
         public static final int clickable=0x7f020000;
     }
     public static final class id {
+        public static final int attack=0x7f070016;
+        public static final int defence=0x7f070015;
         public static final int go=0x7f070002;
-        public static final int immune=0x7f070017;
-        public static final int resistance=0x7f070016;
+        public static final int immune=0x7f070019;
+        public static final int resistance=0x7f070018;
         public static final int textView1=0x7f070003;
         public static final int textView10=0x7f07000c;
         public static final int textView11=0x7f07000d;
@@ -37,7 +39,7 @@ public final class R {
         public static final int textView9=0x7f07000b;
         public static final int topLeft=0x7f070000;
         public static final int topRight=0x7f070001;
-        public static final int weakness=0x7f070015;
+        public static final int weakness=0x7f070017;
     }
     public static final class layout {
         public static final int main=0x7f040000;

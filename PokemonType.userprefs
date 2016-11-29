@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType\Resources\drawable\clickable.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Activities/MainActivity.cs">
     <Files>
-      <File FileName="PokemonType\MainActivity.cs" Line="82" Column="45" />
-      <File FileName="PokemonType\TypeDetailActivity.cs" Line="34" Column="4" />
-      <File FileName="PokemonType\SendData.cs" Line="9" Column="53" />
-      <File FileName="PokemonType\Resources\drawable\clickable.xml" Line="37" Column="12" />
+      <File FileName="PokemonType/Activities/MainActivity.cs" Line="26" Column="4" />
+      <File FileName="PokemonType/SendData.cs" Line="4" Column="22" />
+      <File FileName="PokemonType/Resources/drawable/clickable.xml" Line="3" Column="37" />
+      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="27" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -17,10 +17,24 @@ namespace PokemonType
 	{
 		bool leftTurn = true;
 		GradientDrawable gradient;
+		TextView defenceText;
+		TextView attackText;
+
+		protected override void OnResume()
+		{
+			base.OnResume();
+
+			if (SendData.sendType != null)
+				SendData.sendType.Clear();
+		}
+
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
+
+			defenceText = FindViewById<TextView>(Resource.Id.defence);
+			attackText = FindViewById<TextView>(Resource.Id.attack);
 
 			TextView left = FindViewById<TextView>(Resource.Id.topLeft);
 			TextView right = FindViewById<TextView>(Resource.Id.topRight);
@@ -45,6 +59,10 @@ namespace PokemonType
 			TextView textView17 = FindViewById<TextView>(Resource.Id.textView17);
 			TextView textView18 = FindViewById<TextView>(Resource.Id.textView18);
 
+			gradient = (GradientDrawable)defenceText.Background;
+			gradient.SetColor(Color.Aqua);
+			SendData.kind = "Defense";
+
 			List<TextView> textViews = new List<TextView>
 			{ textView1, textView2, textView3, textView4, textView5, textView6, textView7, textView8, textView9, textView10,
 				textView11, textView12, textView13, textView14, textView15, textView16, textView17, textView18};
@@ -52,8 +70,14 @@ namespace PokemonType
 			string response;
 			StreamReader strm = new StreamReader(Assets.Open("AttackTypeChart.txt"));
 			response = strm.ReadToEnd();
+			allTypes.attackTypes = JsonConvert.DeserializeObject<List<Type>>(response);
 
-			List<Type> types = JsonConvert.DeserializeObject<List<Type>>(response);
+			string response2;
+			StreamReader strm2 = new StreamReader(Assets.Open("DefenseTypeChart.txt"));
+			response2 = strm2.ReadToEnd();
+			allTypes.defenseTypes = JsonConvert.DeserializeObject<List<Type>>(response2);
+
+			var types = allTypes.defenseTypes;
 			for (int i = 0; i < types.Count;i++) 
 			{
 				textViews[i].Tag = i;
@@ -101,14 +125,14 @@ namespace PokemonType
 						{
 							left.Text = types[num].type;
 							left.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[left.Text]));
-							SendData.sendType.Add(types[num]);
+							//SendData.sendType.Add(types[num]);
 							SendData.typeNum.Add(num);
 						}
 						else if (right.Text == "")
 						{
 							right.Text = types[num].type;
 							right.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[right.Text]));
-							SendData.sendType.Add(types[num]);
+							//SendData.sendType.Add(types[num]);
 							SendData.typeNum.Add(num);
 						}
 						else if (leftTurn)
@@ -119,7 +143,7 @@ namespace PokemonType
 							gradient = (GradientDrawable)textViews[SendData.typeNum[0]].Background;
 							gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[SendData.typeNum[0]].type]));
 							SendData.typeNum[0] = num;
-							SendData.sendType[0] = types[num];
+							//SendData.sendType[0] = types[num];
 						}
 						else if (!leftTurn)
 						{
@@ -129,7 +153,7 @@ namespace PokemonType
 							gradient = (GradientDrawable)textViews[SendData.typeNum[1]].Background;
 							gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[SendData.typeNum[1]].type]));
 							SendData.typeNum[1] = num;
-							SendData.sendType[1] = types[num];
+							//SendData.sendType[1] = types[num];
 						}
 					}
 				};
@@ -138,11 +162,23 @@ namespace PokemonType
 			{
 				if (SendData.sendType != null)
 				{
+					var sendTypes = new List<Type>();
+
+					if (SendData.kind == "Attack")
+						sendTypes = allTypes.attackTypes;
+					else
+						sendTypes = allTypes.defenseTypes;
+					for (int i = 0; i < SendData.typeNum.Count; i++)
+					{
+						SendData.sendType.Add(sendTypes[SendData.typeNum[i]]);
+					}
 					StartActivity(typeof(TypeDetailActivity));
 				}
 				else
-					Toast.MakeText(this, "Nothing slected", ToastLength.Short).Show();
+					Toast.MakeText(this, "Nothing selected", ToastLength.Short).Show();
 			};
+			defenceText.Click += DefenseText_Click;
+			attackText.Click += AttackText_Click;
 		}
 
 		public void removeTop(TextView top, int space)
@@ -159,6 +195,34 @@ namespace PokemonType
 			string color = "";
 
 			return color;
+		}
+
+		void DefenseText_Click(object sender, System.EventArgs e)
+		{
+			if (SendData.kind == "Defense")
+				return;
+			else
+			{
+				gradient = (GradientDrawable)defenceText.Background;
+				gradient.SetColor(Color.Aqua);
+				gradient = (GradientDrawable)attackText.Background;
+				gradient.SetColor(Color.ParseColor("#98AFC7"));
+				SendData.kind = "Defense";
+			}
+		}
+
+		void AttackText_Click(object sender, System.EventArgs e)
+		{
+			if (SendData.kind == "Attack")
+				return;
+			else
+			{
+				gradient = (GradientDrawable)attackText.Background;
+				gradient.SetColor(Color.Aqua);
+				gradient = (GradientDrawable)defenceText.Background;
+				gradient.SetColor(Color.ParseColor("#98AFC7"));
+				SendData.kind = "Attack";
+			}
 		}
 	}
 }
