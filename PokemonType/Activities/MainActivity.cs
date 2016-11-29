@@ -99,7 +99,7 @@ namespace PokemonType
 					//textViews[num].Background = drawable;
 
 					int delete = -1;
-					for (int j = 0; j < SendData.sendType.Count; j++)
+					for (int j = 0; j < SendData.typeNum.Count; j++)
 					{
 						if (SendData.typeNum[j] == num)
 							delete = j;
@@ -109,10 +109,10 @@ namespace PokemonType
 					{
 						if (delete == 1)
 							removeTop(right, 1);
-						else if (delete == 0 && SendData.sendType.Count == 2)
+						else if (delete == 0 && SendData.typeNum.Count == 2)
 							removeTop(left, 0);
 						
-						else if (delete == 0 && SendData.sendType.Count == 1 && right.Text != "")
+						else if (delete == 0 && SendData.typeNum.Count == 1 && right.Text != "")
 							removeTop(right, 0);
 						else
 							removeTop(left, 0);
@@ -188,7 +188,7 @@ namespace PokemonType
 			top.SetBackgroundColor(Color.Transparent);
 
 			SendData.typeNum.RemoveAt(space);
-			SendData.sendType.RemoveAt(space);
+			//SendData.sendType.RemoveAt(space);
 		}
 		public string getColor(string type)
 		{
