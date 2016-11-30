@@ -1,6 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <AdditionalAndroidResourcePaths />
-  <AdditionalJavaLibraryReferences />
+  <AdditionalAndroidResourcePaths>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Compat/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Core.UI/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v7.RecyclerView/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Core.Utils/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Media.Compat/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Fragment/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v4/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v7.CardView/24.2.1/embedded</AdditionalAndroidResourcePath>
+  </AdditionalAndroidResourcePaths>
+  <AdditionalJavaLibraryReferences>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Compat/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Compat/24.2.1/embedded/libs/internal_impl-24.2.1.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Core.UI/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Core.UI/24.2.1/embedded/libs/internal_impl-24.2.1.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v7.RecyclerView/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Core.Utils/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Core.Utils/24.2.1/embedded/libs/internal_impl-24.2.1.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Media.Compat/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Media.Compat/24.2.1/embedded/libs/internal_impl-24.2.1.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Fragment/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Fragment/24.2.1/embedded/libs/internal_impl-24.2.1.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v4/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v7.CardView/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+  </AdditionalJavaLibraryReferences>
   <AdditionalNativeLibraryReferences />
 </Paths>

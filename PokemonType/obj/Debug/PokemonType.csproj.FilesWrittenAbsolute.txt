@@ -1,6 +1,5 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/MonoAndroid,Version=v7.0.AssemblyAttribute.cs
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/PokemonType.dll.mdb
-/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/PokemonType.pdb
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/PokemonType.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/com.companyname.pokemontype.apk
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/bin/com.companyname.pokemontype.apk
@@ -14,10 +13,18 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/type_detail_layout.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/values/styles.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/clickable.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/typelayout.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/R.cs.flag
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/com.companyname.pokemontype-Signed.apk
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/uploadflags.txt
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/PokemonType.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/PokemonType.dll.mdb
-/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/PokemonType.pdb
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Newtonsoft.Json.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Compat.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Core.UI.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.v7.RecyclerView.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Core.Utils.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Media.Compat.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Fragment.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.v4.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.v7.CardView.dll

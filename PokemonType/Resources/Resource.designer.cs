@@ -31,12 +31,113 @@ namespace PokemonType
 		public partial class Attribute
 		{
 			
+			// aapt resource value: 0x7f010000
+			public const int cardBackgroundColor = 2130771968;
+			
+			// aapt resource value: 0x7f010001
+			public const int cardCornerRadius = 2130771969;
+			
+			// aapt resource value: 0x7f010002
+			public const int cardElevation = 2130771970;
+			
+			// aapt resource value: 0x7f010003
+			public const int cardMaxElevation = 2130771971;
+			
+			// aapt resource value: 0x7f010005
+			public const int cardPreventCornerOverlap = 2130771973;
+			
+			// aapt resource value: 0x7f010004
+			public const int cardUseCompatPadding = 2130771972;
+			
+			// aapt resource value: 0x7f010006
+			public const int contentPadding = 2130771974;
+			
+			// aapt resource value: 0x7f01000a
+			public const int contentPaddingBottom = 2130771978;
+			
+			// aapt resource value: 0x7f010007
+			public const int contentPaddingLeft = 2130771975;
+			
+			// aapt resource value: 0x7f010008
+			public const int contentPaddingRight = 2130771976;
+			
+			// aapt resource value: 0x7f010009
+			public const int contentPaddingTop = 2130771977;
+			
+			// aapt resource value: 0x7f01000b
+			public const int layoutManager = 2130771979;
+			
+			// aapt resource value: 0x7f01000d
+			public const int reverseLayout = 2130771981;
+			
+			// aapt resource value: 0x7f01000c
+			public const int spanCount = 2130771980;
+			
+			// aapt resource value: 0x7f01000e
+			public const int stackFromEnd = 2130771982;
+			
 			static Attribute()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
 			private Attribute()
+			{
+			}
+		}
+		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int cardview_dark_background = 2131099648;
+			
+			// aapt resource value: 0x7f060001
+			public const int cardview_light_background = 2131099649;
+			
+			// aapt resource value: 0x7f060002
+			public const int cardview_shadow_end_color = 2131099650;
+			
+			// aapt resource value: 0x7f060003
+			public const int cardview_shadow_start_color = 2131099651;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
+		public partial class Dimension
+		{
+			
+			// aapt resource value: 0x7f070000
+			public const int cardview_compat_inset_shadow = 2131165184;
+			
+			// aapt resource value: 0x7f070001
+			public const int cardview_default_elevation = 2131165185;
+			
+			// aapt resource value: 0x7f070002
+			public const int cardview_default_radius = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int item_touch_helper_max_drag_scroll_per_frame = 2131165187;
+			
+			// aapt resource value: 0x7f070004
+			public const int item_touch_helper_swipe_escape_max_velocity = 2131165188;
+			
+			// aapt resource value: 0x7f070005
+			public const int item_touch_helper_swipe_escape_velocity = 2131165189;
+			
+			static Dimension()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Dimension()
 			{
 			}
 		}
@@ -60,83 +161,83 @@ namespace PokemonType
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070016
-			public const int attack = 2131165206;
+			// aapt resource value: 0x7f080017
+			public const int attack = 2131230743;
 			
-			// aapt resource value: 0x7f070015
-			public const int defence = 2131165205;
+			// aapt resource value: 0x7f080016
+			public const int defence = 2131230742;
 			
-			// aapt resource value: 0x7f070002
-			public const int go = 2131165186;
+			// aapt resource value: 0x7f080003
+			public const int go = 2131230723;
 			
-			// aapt resource value: 0x7f070019
-			public const int immune = 2131165209;
+			// aapt resource value: 0x7f080000
+			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f070018
-			public const int resistance = 2131165208;
+			// aapt resource value: 0x7f080019
+			public const int newTypes = 2131230745;
 			
-			// aapt resource value: 0x7f070003
-			public const int textView1 = 2131165187;
+			// aapt resource value: 0x7f080018
+			public const int recyclerView = 2131230744;
 			
-			// aapt resource value: 0x7f07000c
-			public const int textView10 = 2131165196;
+			// aapt resource value: 0x7f080004
+			public const int textView1 = 2131230724;
 			
-			// aapt resource value: 0x7f07000d
-			public const int textView11 = 2131165197;
+			// aapt resource value: 0x7f08000d
+			public const int textView10 = 2131230733;
 			
-			// aapt resource value: 0x7f07000e
-			public const int textView12 = 2131165198;
+			// aapt resource value: 0x7f08000e
+			public const int textView11 = 2131230734;
 			
-			// aapt resource value: 0x7f07000f
-			public const int textView13 = 2131165199;
+			// aapt resource value: 0x7f08000f
+			public const int textView12 = 2131230735;
 			
-			// aapt resource value: 0x7f070010
-			public const int textView14 = 2131165200;
+			// aapt resource value: 0x7f080010
+			public const int textView13 = 2131230736;
 			
-			// aapt resource value: 0x7f070011
-			public const int textView15 = 2131165201;
+			// aapt resource value: 0x7f080011
+			public const int textView14 = 2131230737;
 			
-			// aapt resource value: 0x7f070012
-			public const int textView16 = 2131165202;
+			// aapt resource value: 0x7f080012
+			public const int textView15 = 2131230738;
 			
-			// aapt resource value: 0x7f070013
-			public const int textView17 = 2131165203;
+			// aapt resource value: 0x7f080013
+			public const int textView16 = 2131230739;
 			
-			// aapt resource value: 0x7f070014
-			public const int textView18 = 2131165204;
+			// aapt resource value: 0x7f080014
+			public const int textView17 = 2131230740;
 			
-			// aapt resource value: 0x7f070004
-			public const int textView2 = 2131165188;
+			// aapt resource value: 0x7f080015
+			public const int textView18 = 2131230741;
 			
-			// aapt resource value: 0x7f070005
-			public const int textView3 = 2131165189;
+			// aapt resource value: 0x7f080005
+			public const int textView2 = 2131230725;
 			
-			// aapt resource value: 0x7f070006
-			public const int textView4 = 2131165190;
+			// aapt resource value: 0x7f080006
+			public const int textView3 = 2131230726;
 			
-			// aapt resource value: 0x7f070007
-			public const int textView5 = 2131165191;
+			// aapt resource value: 0x7f080007
+			public const int textView4 = 2131230727;
 			
-			// aapt resource value: 0x7f070008
-			public const int textView6 = 2131165192;
+			// aapt resource value: 0x7f080008
+			public const int textView5 = 2131230728;
 			
-			// aapt resource value: 0x7f070009
-			public const int textView7 = 2131165193;
+			// aapt resource value: 0x7f080009
+			public const int textView6 = 2131230729;
 			
-			// aapt resource value: 0x7f07000a
-			public const int textView8 = 2131165194;
+			// aapt resource value: 0x7f08000a
+			public const int textView7 = 2131230730;
 			
-			// aapt resource value: 0x7f07000b
-			public const int textView9 = 2131165195;
+			// aapt resource value: 0x7f08000b
+			public const int textView8 = 2131230731;
 			
-			// aapt resource value: 0x7f070000
-			public const int topLeft = 2131165184;
+			// aapt resource value: 0x7f08000c
+			public const int textView9 = 2131230732;
 			
-			// aapt resource value: 0x7f070001
-			public const int topRight = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int topLeft = 2131230721;
 			
-			// aapt resource value: 0x7f070017
-			public const int weakness = 2131165207;
+			// aapt resource value: 0x7f080002
+			public const int topRight = 2131230722;
 			
 			static Id()
 			{
@@ -156,6 +257,9 @@ namespace PokemonType
 			
 			// aapt resource value: 0x7f040001
 			public const int type_detail_layout = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int TypeLayout = 2130968578;
 			
 			static Layout()
 			{
@@ -186,11 +290,11 @@ namespace PokemonType
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int app_name = 2131034113;
+			// aapt resource value: 0x7f090001
+			public const int app_name = 2131296257;
 			
-			// aapt resource value: 0x7f050000
-			public const int hello = 2131034112;
+			// aapt resource value: 0x7f090000
+			public const int hello = 2131296256;
 			
 			static String()
 			{
@@ -205,8 +309,20 @@ namespace PokemonType
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int button_text = 2131099648;
+			// aapt resource value: 0x7f050001
+			public const int Base_CardView = 2131034113;
+			
+			// aapt resource value: 0x7f050000
+			public const int CardView = 2131034112;
+			
+			// aapt resource value: 0x7f050002
+			public const int CardView_Dark = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int CardView_Light = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int button_text = 2131034116;
 			
 			static Style()
 			{
@@ -214,6 +330,101 @@ namespace PokemonType
 			}
 			
 			private Style()
+			{
+			}
+		}
+		
+		public partial class Styleable
+		{
+			
+			public static int[] CardView = new int[]
+			{
+					16843071,
+					16843072,
+					2130771968,
+					2130771969,
+					2130771970,
+					2130771971,
+					2130771972,
+					2130771973,
+					2130771974,
+					2130771975,
+					2130771976,
+					2130771977,
+					2130771978};
+			
+			// aapt resource value: 1
+			public const int CardView_android_minHeight = 1;
+			
+			// aapt resource value: 0
+			public const int CardView_android_minWidth = 0;
+			
+			// aapt resource value: 2
+			public const int CardView_cardBackgroundColor = 2;
+			
+			// aapt resource value: 3
+			public const int CardView_cardCornerRadius = 3;
+			
+			// aapt resource value: 4
+			public const int CardView_cardElevation = 4;
+			
+			// aapt resource value: 5
+			public const int CardView_cardMaxElevation = 5;
+			
+			// aapt resource value: 7
+			public const int CardView_cardPreventCornerOverlap = 7;
+			
+			// aapt resource value: 6
+			public const int CardView_cardUseCompatPadding = 6;
+			
+			// aapt resource value: 8
+			public const int CardView_contentPadding = 8;
+			
+			// aapt resource value: 12
+			public const int CardView_contentPaddingBottom = 12;
+			
+			// aapt resource value: 9
+			public const int CardView_contentPaddingLeft = 9;
+			
+			// aapt resource value: 10
+			public const int CardView_contentPaddingRight = 10;
+			
+			// aapt resource value: 11
+			public const int CardView_contentPaddingTop = 11;
+			
+			public static int[] RecyclerView = new int[]
+			{
+					16842948,
+					16842993,
+					2130771979,
+					2130771980,
+					2130771981,
+					2130771982};
+			
+			// aapt resource value: 1
+			public const int RecyclerView_android_descendantFocusability = 1;
+			
+			// aapt resource value: 0
+			public const int RecyclerView_android_orientation = 0;
+			
+			// aapt resource value: 2
+			public const int RecyclerView_layoutManager = 2;
+			
+			// aapt resource value: 4
+			public const int RecyclerView_reverseLayout = 4;
+			
+			// aapt resource value: 3
+			public const int RecyclerView_spanCount = 3;
+			
+			// aapt resource value: 5
+			public const int RecyclerView_stackFromEnd = 5;
+			
+			static Styleable()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Styleable()
 			{
 			}
 		}
