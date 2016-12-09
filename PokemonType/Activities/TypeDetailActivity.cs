@@ -26,6 +26,8 @@ namespace PokemonType
 
 			recyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView);
 
+			//CardView cardView = FindViewById<CardView>(Resource.Id.c
+
 			List<string> weakness = SendData.sendType[0].effective;
 			List<string> resistance = SendData.sendType[0].resistance;
 			List<string> immune = SendData.sendType[0].immune;
@@ -40,9 +42,12 @@ namespace PokemonType
 			//	immune.Text += createString(SendData.sendType[i].immune);
 			//}
 
-			recyclerView.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Vertical, false));
+			recyclerView.SetLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.Vertical, false));
 
-			var adapter = new TypeAdapter(resistance);
+			List<string>[] list = { resistance, weakness, immune };
+
+			recyclerView.HasFixedSize = true;
+			var adapter = new TypeAdapter(list);
 			adapter.ItemClick += OnItemClick;
 			recyclerView.SetAdapter(adapter);
 		}

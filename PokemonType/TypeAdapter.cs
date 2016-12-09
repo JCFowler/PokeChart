@@ -2,13 +2,14 @@
 using Android.Views;
 using Android.Support.V7.Widget;
 using System.Collections.Generic;
+using Android.Graphics;
 
 namespace PokemonType
 {
 	public class TypeAdapter : RecyclerView.Adapter
 	{
 		public event EventHandler<int> ItemClick;
-		List<string> types;
+		List<string>[] types;
 
 		void OnItemClick(int position)
 		{
@@ -18,16 +19,22 @@ namespace PokemonType
 			}
 		}
 
-		public TypeAdapter(List<string> types)
+		public TypeAdapter(List<string>[] types)
 		{
 			this.types = types;
 		}
+
 
 		public override int ItemCount
 		{
 			get
 			{
-				return types.Count;
+				int count = 0;
+				foreach (var type in types)
+				{
+					count += type.Count; 
+				}
+				return count;
 			}
 		}
 
@@ -42,7 +49,8 @@ namespace PokemonType
 		{
 			var newHolder = (TypeViewHolder)holder;
 
-			newHolder.typeName.Text = types[position];
+			newHolder.typeName.Text = types[0][0];
+			newHolder.card.SetCardBackgroundColor(Color.ParseColor(Colors.TypeToColor[newHolder.typeName.Text]));
 		}
 	}
 }

@@ -164,6 +164,9 @@ namespace PokemonType
 			// aapt resource value: 0x7f080017
 			public const int attack = 2131230743;
 			
+			// aapt resource value: 0x7f080019
+			public const int cardView = 2131230745;
+			
 			// aapt resource value: 0x7f080016
 			public const int defence = 2131230742;
 			
@@ -173,8 +176,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f080019
-			public const int newTypes = 2131230745;
+			// aapt resource value: 0x7f08001a
+			public const int newTypes = 2131230746;
 			
 			// aapt resource value: 0x7f080018
 			public const int recyclerView = 2131230744;
