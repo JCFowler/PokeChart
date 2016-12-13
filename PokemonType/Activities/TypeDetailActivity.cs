@@ -42,12 +42,12 @@ namespace PokemonType
 			//	immune.Text += createString(SendData.sendType[i].immune);
 			//}
 
-			recyclerView.SetLayoutManager(new GridLayoutManager(this, 3, LinearLayoutManager.Vertical, false));
+			recyclerView.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Vertical, false));
 
-			List<string>[] list = { resistance, weakness, immune };
+			//List<string>[] list = { resistance, weakness, immune };
 
 			recyclerView.HasFixedSize = true;
-			var adapter = new TypeAdapter(list);
+			var adapter = new TypeAdapter(resistance);
 			adapter.ItemClick += OnItemClick;
 			recyclerView.SetAdapter(adapter);
 		}
