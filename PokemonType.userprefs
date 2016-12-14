@@ -1,30 +1,11 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/TypeAdapter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Activities/TypeDetailActivity.cs">
     <Files>
       <File FileName="PokemonType/Activities/MainActivity.cs" Line="127" Column="81" />
       <File FileName="PokemonType/SendData.cs" Line="4" Column="22" />
       <File FileName="PokemonType/Resources/drawable/clickable.xml" Line="3" Column="37" />
-      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="29" Column="62" />
-      <File FileName="PokemonType/TypeViewHolder.cs" Line="15" Column="65" />
-      <File FileName="PokemonType/TypeAdapter.cs" Line="48" Column="24" />
+      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="31" Column="62" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="PokemonType" expanded="True">
-            <Node name="PokemonType" expanded="True">
-              <Node name="Packages" expanded="True" />
-              <Node name="Activities" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-                <Node name="layout" expanded="True" />
-              </Node>
-              <Node name="TypeAdapter.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

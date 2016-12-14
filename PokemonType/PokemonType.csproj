@@ -80,8 +80,6 @@
     <Compile Include="SendData.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\TypeDetailActivity.cs" />
-    <Compile Include="TypeViewHolder.cs" />
-    <Compile Include="TypeAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -100,7 +98,6 @@
     <AndroidResource Include="Resources\layout\type_detail_layout.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\clickable.xml" />
-    <AndroidResource Include="Resources\layout\TypeLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

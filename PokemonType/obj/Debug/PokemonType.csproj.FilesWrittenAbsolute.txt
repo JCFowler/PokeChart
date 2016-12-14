@@ -13,7 +13,6 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/type_detail_layout.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/values/styles.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/clickable.xml
-/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/typelayout.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/R.cs.flag
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/com.companyname.pokemontype-Signed.apk
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/uploadflags.txt

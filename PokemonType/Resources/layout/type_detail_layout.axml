@@ -1,11 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    android:background="@android:color/background_light"
+    android:weightSum="3">
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextView
+            android:text="Weakness"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:id="@+id/textView1" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextView
+            android:text="Restiance"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:id="@+id/textView2" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TextView
+            android:text="Immune"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_blue_dark"
+            android:id="@+id/textView3" />
+    </LinearLayout>
 </LinearLayout>

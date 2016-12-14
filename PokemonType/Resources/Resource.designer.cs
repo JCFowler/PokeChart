@@ -164,9 +164,6 @@ namespace PokemonType
 			// aapt resource value: 0x7f080017
 			public const int attack = 2131230743;
 			
-			// aapt resource value: 0x7f080019
-			public const int cardView = 2131230745;
-			
 			// aapt resource value: 0x7f080016
 			public const int defence = 2131230742;
 			
@@ -176,11 +173,14 @@ namespace PokemonType
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
 			
-			// aapt resource value: 0x7f08001a
-			public const int newTypes = 2131230746;
-			
 			// aapt resource value: 0x7f080018
-			public const int recyclerView = 2131230744;
+			public const int layout1 = 2131230744;
+			
+			// aapt resource value: 0x7f080019
+			public const int layout2 = 2131230745;
+			
+			// aapt resource value: 0x7f08001a
+			public const int layout3 = 2131230746;
 			
 			// aapt resource value: 0x7f080004
 			public const int textView1 = 2131230724;
@@ -260,9 +260,6 @@ namespace PokemonType
 			
 			// aapt resource value: 0x7f040001
 			public const int type_detail_layout = 2130968577;
-			
-			// aapt resource value: 0x7f040002
-			public const int TypeLayout = 2130968578;
 			
 			static Layout()
 			{

@@ -166,12 +166,12 @@ containing a value of this type.
     }
     public static final class id {
         public static int attack=0x7f080017;
-        public static int cardView=0x7f080019;
         public static int defence=0x7f080016;
         public static int go=0x7f080003;
         public static int item_touch_helper_previous_elevation=0x7f080000;
-        public static int newTypes=0x7f08001a;
-        public static int recyclerView=0x7f080018;
+        public static int layout1=0x7f080018;
+        public static int layout2=0x7f080019;
+        public static int layout3=0x7f08001a;
         public static int textView1=0x7f080004;
         public static int textView10=0x7f08000d;
         public static int textView11=0x7f08000e;
@@ -196,7 +196,6 @@ containing a value of this type.
     public static final class layout {
         public static int main=0x7f040000;
         public static int type_detail_layout=0x7f040001;
-        public static int typelayout=0x7f040002;
     }
     public static final class mipmap {
         public static int icon=0x7f030000;
