@@ -37,37 +37,83 @@ namespace PokemonType
 
 			if (SendData.sendType.Count > 1)
 			{
-				weakness.Concat(SendData.sendType[1].effective).ToList();
-				resistance.Concat(SendData.sendType[1].effective).ToList();
-				immune.Concat(SendData.sendType[1].effective).ToList();
+				weakness.AddRange(SendData.sendType[1].effective);
+				resistance.AddRange(SendData.sendType[1].resistance);
+				immune.AddRange(SendData.sendType[1].immune);
+
+				weakness.Sort();
+				resistance.Sort();
+				immune.Sort();
+
+				RemoveDoubles(weakness, resistance, immune);
+				RemoveDoubles(resistance, weakness, immune);
 			}
 			//TextView weakness = FindViewById<TextView>(Resource.Id.weakness);
 			//TextView resistance = FindViewById<TextView>(Resource.Id.resistance);
 			//TextView immune = FindViewById<TextView>(Resource.Id.immune);
 
-			for (int i = 0; i < weakness.Count; i++)
+			PopulateTF(weakness, layout1, 2);
+			PopulateTF(resistance, layout2, .5);
+			PopulateTF(immune, layout3, 0);
+		}
+
+		void RemoveDoubles(List<string> main, List<string> first, List<string> immuneList)
+		{
+			for (int i = 0; i < main.Count; i++)
 			{
-				TextView tf = new TextView(this);
-				tf.Text = weakness[i];
-				tf.Gravity = GravityFlags.Center;
-				tf.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[weakness[i]]));
-				layout1.AddView(tf);
+				for (int j = 0; j < first.Count; j++)
+				{
+					if (main[i] == first[j])
+					{
+						main.RemoveAt(i);
+						first.RemoveAt(j);
+					}
+				}
+				for (int j = 0; j < immuneList.Count; j++)
+				{
+					if (main[i] == immuneList[j])
+					{
+						main.RemoveAt(i);
+					}
+				}
 			}
-			for (int i = 0; i < resistance.Count; i++)
+		}
+
+		void PopulateTF(List<string> list, LinearLayout layout, double degree)
+		{
+			List<double> counter = new List<double>();
+			for (int i = 0; i < list.Count; i++)
 			{
-				TextView tf = new TextView(this);
-				tf.Text = resistance[i];
-				tf.Gravity = GravityFlags.Center;
-				tf.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[resistance[i]]));
-				layout2.AddView(tf);;
+				double num = degree;
+				if (i == 0) { }
+				else if (i+1 == list.Count) { }
+				else if (list[i] == list[i - 1])
+				{
+					if (degree == .5)
+						num = degree / 2;
+					else
+						num = degree * 2;
+					list.RemoveAt(i - 1);
+				}
+				else if (list[i] == list[i + 1])
+				{
+					if (degree == .5)
+						num = degree / 2;
+					else
+						num = degree * 2;
+					list.RemoveAt(i + 1);
+				}
+
+				counter.Add(num);
 			}
-			for (int i = 0; i < immune.Count; i++)
+			
+			for (int i = 0; i < list.Count; i++)
 			{
 				TextView tf = new TextView(this);
-				tf.Text = immune[i];
+				tf.Text = "x" + counter[i].ToString() + " " + list[i];
 				tf.Gravity = GravityFlags.Center;
-				tf.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[immune[i]]));
-				layout3.AddView(tf);;
+				tf.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[list[i]]));
+				layout.AddView(tf); ;
 			}
 		}
 
