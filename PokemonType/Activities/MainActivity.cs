@@ -9,16 +9,18 @@ using Android.Views.Animations;
 using Android.Graphics.Drawables;
 using Android.Graphics.Drawables.Shapes;
 using Android.Views;
+using System;
 
 namespace PokemonType
 {
 	[Activity(Label = "PokemonType", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
+		DateTime clickedTime;
+		TextView clickedView;
 		bool leftTurn = true;
 		GradientDrawable gradient;
-		TextView defenceText;
-		TextView attackText;
+		List<TextView> textViews = new List<TextView>();
 
 		protected override void OnResume()
 		{
@@ -32,9 +34,6 @@ namespace PokemonType
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
-
-			defenceText = FindViewById<TextView>(Resource.Id.defence);
-			attackText = FindViewById<TextView>(Resource.Id.attack);
 
 			TextView left = FindViewById<TextView>(Resource.Id.topLeft);
 			TextView right = FindViewById<TextView>(Resource.Id.topRight);
@@ -59,11 +58,7 @@ namespace PokemonType
 			TextView textView17 = FindViewById<TextView>(Resource.Id.textView17);
 			TextView textView18 = FindViewById<TextView>(Resource.Id.textView18);
 
-			gradient = (GradientDrawable)defenceText.Background;
-			gradient.SetColor(Color.Aqua);
-			SendData.kind = "Defense";
-
-			List<TextView> textViews = new List<TextView>
+			textViews = new List<TextView>
 			{ textView1, textView2, textView3, textView4, textView5, textView6, textView7, textView8, textView9, textView10,
 				textView11, textView12, textView13, textView14, textView15, textView16, textView17, textView18};
 
@@ -91,12 +86,9 @@ namespace PokemonType
 				{
 					int num = (int)((TextView)sender).Tag;
 
-					gradient = (GradientDrawable)textViews[num].Background;
+					GetTimeSpan(textViews[num], num);
 
-					//GradientDrawable drawable = new GradientDrawable(
-					//	GradientDrawable.Orientation.BottomTop, new int[] { Color.ParseColor(Colors.TypeToColor[types[num].type]), Color.Blue
-					//});
-					//textViews[num].Background = drawable;
+					gradient = (GradientDrawable)textViews[num].Background;
 
 					int delete = -1;
 					for (int j = 0; j < SendData.typeNum.Count; j++)
@@ -160,14 +152,10 @@ namespace PokemonType
 			}
 			goBtn.Click += (sender, e) =>
 			{
-				if (SendData.sendType != null)
+				if (SendData.sendType != null && SendData.typeNum.Count > 0)
 				{
-					var sendTypes = new List<Type>();
-
-					if (SendData.kind == "Attack")
-						sendTypes = allTypes.attackTypes;
-					else
-						sendTypes = allTypes.defenseTypes;
+					SendData.kind = "Defense";
+					var sendTypes = allTypes.defenseTypes;
 					for (int i = 0; i < SendData.typeNum.Count; i++)
 					{
 						SendData.sendType.Add(sendTypes[SendData.typeNum[i]]);
@@ -177,8 +165,6 @@ namespace PokemonType
 				else
 					Toast.MakeText(this, "Nothing selected", ToastLength.Short).Show();
 			};
-			defenceText.Click += DefenseText_Click;
-			attackText.Click += AttackText_Click;
 		}
 
 		public void removeTop(TextView top, int space)
@@ -197,32 +183,27 @@ namespace PokemonType
 			return color;
 		}
 
-		void DefenseText_Click(object sender, System.EventArgs e)
+		public bool GetTimeSpan(TextView TF, int num)
 		{
-			if (SendData.kind == "Defense")
-				return;
-			else
+			if (clickedView != null)
 			{
-				gradient = (GradientDrawable)defenceText.Background;
-				gradient.SetColor(Color.Aqua);
-				gradient = (GradientDrawable)attackText.Background;
-				gradient.SetColor(Color.ParseColor("#98AFC7"));
-				SendData.kind = "Defense";
-			}
-		}
+				if (clickedView == TF)
+				{
+					TimeSpan timespan = DateTime.Now - clickedTime;
+					if (timespan.Milliseconds < 300)
+					{
+						var sendTypes = allTypes.attackTypes;
 
-		void AttackText_Click(object sender, System.EventArgs e)
-		{
-			if (SendData.kind == "Attack")
-				return;
-			else
-			{
-				gradient = (GradientDrawable)attackText.Background;
-				gradient.SetColor(Color.Aqua);
-				gradient = (GradientDrawable)defenceText.Background;
-				gradient.SetColor(Color.ParseColor("#98AFC7"));
-				SendData.kind = "Attack";
+						SendData.kind = "Attack";
+						SendData.sendType.Add(sendTypes[num]);
+						StartActivity(typeof(TypeDetailActivity));
+					}
+				}
 			}
+
+			clickedView = TF;
+			clickedTime = DateTime.Now;
+			return false;
 		}
 	}
 }

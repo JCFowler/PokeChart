@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +26,26 @@ namespace PokemonType
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.type_detail_layout);
 
+			TextView leftTitle = FindViewById<TextView>(Resource.Id.leftTitle);
+			TextView middleTitle = FindViewById<TextView>(Resource.Id.middleTitle);
+			TextView rightTitle = FindViewById<TextView>(Resource.Id.rightTitle);
+
+			if (SendData.kind == "Attack")
+			{
+				leftTitle.Text = "Effective";
+				middleTitle.Text = "Weak";
+				//rightTitle.Text = "Immune";
+			}
+			else
+			{
+				leftTitle.Text = "Weak";
+				middleTitle.Text = "Resistance";
+				//rightTitle.Text = "Immune"
+			}
+
+			TextView topLeft = FindViewById<TextView>(Resource.Id.leftTop);
+			TextView topRight = FindViewById<TextView>(Resource.Id.rightTop);
+
 			layout1 = FindViewById<LinearLayout>(Resource.Id.layout1);
 			layout2 = FindViewById<LinearLayout>(Resource.Id.layout2);
 			layout3 = FindViewById<LinearLayout>(Resource.Id.layout3);
@@ -37,6 +56,11 @@ namespace PokemonType
 
 			if (SendData.sendType.Count > 1)
 			{
+				topLeft.Text = SendData.sendType[0].type;
+				topLeft.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[topLeft.Text]));
+				topRight.Text = SendData.sendType[1].type;
+				topRight.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[topRight.Text]));
+
 				weakness.AddRange(SendData.sendType[1].effective);
 				resistance.AddRange(SendData.sendType[1].resistance);
 				immune.AddRange(SendData.sendType[1].immune);
@@ -47,6 +71,12 @@ namespace PokemonType
 
 				RemoveDoubles(weakness, resistance, immune);
 				RemoveDoubles(resistance, weakness, immune);
+			}
+			else
+			{
+				topLeft.Text = SendData.sendType[0].type;
+				topLeft.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[topLeft.Text]));
+				topRight.Visibility = ViewStates.Gone;
 			}
 			//TextView weakness = FindViewById<TextView>(Resource.Id.weakness);
 			//TextView resistance = FindViewById<TextView>(Resource.Id.resistance);
@@ -69,12 +99,14 @@ namespace PokemonType
 						first.RemoveAt(j);
 					}
 				}
+			}
+
+			for (int i = 0; i < main.Count; i++)
+			{
 				for (int j = 0; j < immuneList.Count; j++)
 				{
 					if (main[i] == immuneList[j])
-					{
 						main.RemoveAt(i);
-					}
 				}
 			}
 		}

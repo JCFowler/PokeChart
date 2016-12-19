@@ -161,14 +161,8 @@ namespace PokemonType
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080017
-			public const int attack = 2131230743;
-			
-			// aapt resource value: 0x7f080016
-			public const int defence = 2131230742;
-			
-			// aapt resource value: 0x7f080003
-			public const int go = 2131230723;
+			// aapt resource value: 0x7f080015
+			public const int go = 2131230741;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
@@ -176,65 +170,80 @@ namespace PokemonType
 			// aapt resource value: 0x7f080018
 			public const int layout1 = 2131230744;
 			
-			// aapt resource value: 0x7f080019
-			public const int layout2 = 2131230745;
-			
 			// aapt resource value: 0x7f08001a
-			public const int layout3 = 2131230746;
+			public const int layout2 = 2131230746;
 			
-			// aapt resource value: 0x7f080004
-			public const int textView1 = 2131230724;
+			// aapt resource value: 0x7f08001c
+			public const int layout3 = 2131230748;
 			
-			// aapt resource value: 0x7f08000d
-			public const int textView10 = 2131230733;
+			// aapt resource value: 0x7f080019
+			public const int leftTitle = 2131230745;
 			
-			// aapt resource value: 0x7f08000e
-			public const int textView11 = 2131230734;
+			// aapt resource value: 0x7f080016
+			public const int leftTop = 2131230742;
 			
-			// aapt resource value: 0x7f08000f
-			public const int textView12 = 2131230735;
+			// aapt resource value: 0x7f08001b
+			public const int middleTitle = 2131230747;
 			
-			// aapt resource value: 0x7f080010
-			public const int textView13 = 2131230736;
+			// aapt resource value: 0x7f08001d
+			public const int rightTitle = 2131230749;
 			
-			// aapt resource value: 0x7f080011
-			public const int textView14 = 2131230737;
+			// aapt resource value: 0x7f080017
+			public const int rightTop = 2131230743;
 			
-			// aapt resource value: 0x7f080012
-			public const int textView15 = 2131230738;
-			
-			// aapt resource value: 0x7f080013
-			public const int textView16 = 2131230739;
-			
-			// aapt resource value: 0x7f080014
-			public const int textView17 = 2131230740;
-			
-			// aapt resource value: 0x7f080015
-			public const int textView18 = 2131230741;
-			
-			// aapt resource value: 0x7f080005
-			public const int textView2 = 2131230725;
-			
-			// aapt resource value: 0x7f080006
-			public const int textView3 = 2131230726;
-			
-			// aapt resource value: 0x7f080007
-			public const int textView4 = 2131230727;
-			
-			// aapt resource value: 0x7f080008
-			public const int textView5 = 2131230728;
-			
-			// aapt resource value: 0x7f080009
-			public const int textView6 = 2131230729;
-			
-			// aapt resource value: 0x7f08000a
-			public const int textView7 = 2131230730;
-			
-			// aapt resource value: 0x7f08000b
-			public const int textView8 = 2131230731;
+			// aapt resource value: 0x7f080003
+			public const int textView1 = 2131230723;
 			
 			// aapt resource value: 0x7f08000c
-			public const int textView9 = 2131230732;
+			public const int textView10 = 2131230732;
+			
+			// aapt resource value: 0x7f08000d
+			public const int textView11 = 2131230733;
+			
+			// aapt resource value: 0x7f08000e
+			public const int textView12 = 2131230734;
+			
+			// aapt resource value: 0x7f08000f
+			public const int textView13 = 2131230735;
+			
+			// aapt resource value: 0x7f080010
+			public const int textView14 = 2131230736;
+			
+			// aapt resource value: 0x7f080011
+			public const int textView15 = 2131230737;
+			
+			// aapt resource value: 0x7f080012
+			public const int textView16 = 2131230738;
+			
+			// aapt resource value: 0x7f080013
+			public const int textView17 = 2131230739;
+			
+			// aapt resource value: 0x7f080014
+			public const int textView18 = 2131230740;
+			
+			// aapt resource value: 0x7f080004
+			public const int textView2 = 2131230724;
+			
+			// aapt resource value: 0x7f080005
+			public const int textView3 = 2131230725;
+			
+			// aapt resource value: 0x7f080006
+			public const int textView4 = 2131230726;
+			
+			// aapt resource value: 0x7f080007
+			public const int textView5 = 2131230727;
+			
+			// aapt resource value: 0x7f080008
+			public const int textView6 = 2131230728;
+			
+			// aapt resource value: 0x7f080009
+			public const int textView7 = 2131230729;
+			
+			// aapt resource value: 0x7f08000a
+			public const int textView8 = 2131230730;
+			
+			// aapt resource value: 0x7f08000b
+			public const int textView9 = 2131230731;
 			
 			// aapt resource value: 0x7f080001
 			public const int topLeft = 2131230721;
