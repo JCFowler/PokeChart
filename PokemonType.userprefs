@@ -1,9 +1,12 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Activities/MainActivity.cs">
     <Files>
-      <File FileName="PokemonType/Activities/MainActivity.cs" Line="157" Column="32" />
-      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="43" Column="32" />
+      <File FileName="PokemonType/Activities/MainActivity.cs" Line="32" Column="4" />
+      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="49" Column="4" />
       <File FileName="PokemonType/SendData.cs" Line="12" Column="15" />
+      <File FileName="PokemonType/Resources/values/styles.xml" Line="5" Column="60" />
+      <File FileName="PokemonType/Resources/drawable/clickable.xml" Line="6" Column="30" />
+      <File FileName="PokemonType/GetTypeLists.cs" Line="8" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,16 +15,13 @@
             <Node name="PokemonType" expanded="True">
               <Node name="Activities" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True">
-                  <Node name="Main.axml" selected="True" />
-                </Node>
+                <Node name="drawable" expanded="True" />
+                <Node name="layout" expanded="True" />
+                <Node name="values" expanded="True" />
               </Node>
             </Node>
           </Node>
         </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

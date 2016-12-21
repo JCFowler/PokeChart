@@ -80,6 +80,7 @@
     <Compile Include="SendData.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\TypeDetailActivity.cs" />
+    <Compile Include="GetTypeLists.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
