@@ -11,8 +11,12 @@ namespace PokemonType
 
 	public class SendData
 	{
-		public static List<Type> sendType = new List<Type>();
-		public static List<int> typeNum = new List<int>();
-		public static string kind;
+		public static List<Type> sendAttackType = new List<Type>();
+	}
+
+	public class SingleType
+	{
+		public Type type = new Type();
+		public int num;
 	}
 }

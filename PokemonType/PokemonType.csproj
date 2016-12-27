@@ -81,6 +81,7 @@
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\TypeDetailActivity.cs" />
     <Compile Include="GetTypeLists.cs" />
+    <Compile Include="AddTypeData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

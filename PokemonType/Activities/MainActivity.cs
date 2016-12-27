@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using Android.Graphics;
 using Android.Graphics.Drawables;
 using System;
+using Android.Views;
+using System.Linq;
 
 namespace PokemonType
 {
@@ -18,6 +20,10 @@ namespace PokemonType
 		List<TextView> textViews = new List<TextView>();
 		TextView left;
 		TextView right;
+		List<Type> types = new List<Type>();
+
+		SingleType leftSide = new SingleType();
+		SingleType rightSide = new SingleType();
 
 		LinearLayout layout1;
 		LinearLayout layout2;
@@ -26,9 +32,7 @@ namespace PokemonType
 		protected override void OnResume()
 		{
 			base.OnResume();
-
-			if (SendData.sendType != null)
-				SendData.sendType.Clear();
+			clickedView = null;
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -36,6 +40,11 @@ namespace PokemonType
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
 
+			layout1 = FindViewById<LinearLayout>(Resource.Id.layout1);
+			layout2 = FindViewById<LinearLayout>(Resource.Id.layout2);
+			layout3 = FindViewById<LinearLayout>(Resource.Id.layout3);
+			left = FindViewById<TextView>(Resource.Id.leftTop);
+			right = FindViewById<TextView>(Resource.Id.rightTop);
 			TextView textView1 = FindViewById<TextView>(Resource.Id.textView1);
 			TextView textView2 = FindViewById<TextView>(Resource.Id.textView2);
 			TextView textView3 = FindViewById<TextView>(Resource.Id.textView3);
@@ -54,126 +63,133 @@ namespace PokemonType
 			TextView textView16 = FindViewById<TextView>(Resource.Id.textView16);
 			TextView textView17 = FindViewById<TextView>(Resource.Id.textView17);
 			TextView textView18 = FindViewById<TextView>(Resource.Id.textView18);
-
 			textViews = new List<TextView>
 			{ textView1, textView2, textView3, textView4, textView5, textView6, textView7, textView8, textView9, textView10,
 				textView11, textView12, textView13, textView14, textView15, textView16, textView17, textView18};
 
-			layout1 = FindViewById<LinearLayout>(Resource.Id.layout1);
-			layout2 = FindViewById<LinearLayout>(Resource.Id.layout2);
-			layout3 = FindViewById<LinearLayout>(Resource.Id.layout3);
-
-			left = FindViewById<TextView>(Resource.Id.leftTop);
-			right = FindViewById<TextView>(Resource.Id.rightTop);
-
 			GetTypeLists.GetEnglishLists(Assets);
+			types = allTypes.defenseTypes;
 
-			var types = allTypes.defenseTypes;
 			for (int i = 0; i < types.Count;i++) 
 			{
 				textViews[i].Tag = i;
 				textViews[i].Text = types[i].type;
-				textViews[i].Gravity = Android.Views.GravityFlags.Center;
+				textViews[i].Gravity = GravityFlags.Center;
 
 				gradient = (GradientDrawable)textViews[i].Background;
 				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[i].type]));
 
 				textViews[i].Click += Handle_Click;
 			}
-			//goBtn.Click += (sender, e) =>
-			//{
-			//	if (SendData.sendType != null && SendData.typeNum.Count > 0)
-			//	{
-			//		SendData.kind = "Defense";
-			//		var sendTypes = allTypes.defenseTypes;
-			//		for (int i = 0; i < SendData.typeNum.Count; i++)
-			//		{
-			//			SendData.sendType.Add(sendTypes[SendData.typeNum[i]]);
-			//		}
-			//		StartActivity(typeof(test));
-			//	}
-			//	else
-			//		Toast.MakeText(this, "Nothing selected", ToastLength.Short).Show();
-			//};
 		}
 
 		void Handle_Click(object sender, EventArgs e)
 		{
-			var types = allTypes.defenseTypes;
 			int num = (int)((TextView)sender).Tag;
 
-			GetTimeSpan(textViews[num], num);
-
-			gradient = (GradientDrawable)textViews[num].Background;
-
-			int delete = -1;
-			for (int j = 0; j < SendData.typeNum.Count; j++)
+			if (!GetTimeSpan(textViews[num], num))
 			{
-				if (SendData.typeNum[j] == num)
-					delete = j;
-			}
+				gradient = (GradientDrawable)textViews[num].Background;
 
-			if (delete != -1)
-			{
-				if (delete == 1)
-					removeTop(right, 1);
-				else if (delete == 0 && SendData.typeNum.Count == 2)
-					removeTop(left, 0);
+				removeChilren(layout1);
+				removeChilren(layout2);
+				removeChilren(layout3);
 
-				else if (delete == 0 && SendData.typeNum.Count == 1 && right.Text != "")
-					removeTop(right, 0);
+				if (leftSide.num == num)
+					removeTop(left, leftSide);
+				else if (rightSide.num == num)
+					removeTop(right, rightSide);
 				else
-					removeTop(left, 0);
-			}
-			else
-			{
-				gradient.SetColor(Color.Aqua);
+				{
+					gradient.SetColor(Color.Aqua);
 
-				if (left.Text == "")
-				{
-					left.Text = types[num].type;
-					left.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[left.Text]));
-					//SendData.sendType.Add(types[num]);
-					SendData.typeNum.Add(num);
+					if (left.Text == "")
+					{
+						left.Text = types[num].type;
+						left.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[left.Text]));
+						leftSide.type = types[num];
+						leftSide.num = num;
+					}
+					else if (right.Text == "")
+					{
+						right.Text = types[num].type;
+						right.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[right.Text]));
+						rightSide.type = types[num];
+						rightSide.num = num;
+					}
+					else if (leftTurn)
+					{
+						left.Text = types[num].type;
+						left.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[left.Text]));
+						leftTurn = false;
+						gradient = (GradientDrawable)textViews[leftSide.num].Background;
+						gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[leftSide.num].type]));
+						leftSide.type = types[num];
+						leftSide.num = num;
+					}
+					else if (!leftTurn)
+					{
+						right.Text = types[num].type;
+						right.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[right.Text]));
+						leftTurn = true;
+						gradient = (GradientDrawable)textViews[rightSide.num].Background;
+						gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[rightSide.num].type]));
+						rightSide.type = types[num];
+						rightSide.num = num;
+					}
 				}
-				else if (right.Text == "")
+
+				List<string> weakness = new List<string>();
+				List<string> resistance = new List<string>();
+				List<string> immune = new List<string>();
+
+				if (leftSide.type != null && rightSide.type != null)
 				{
-					right.Text = types[num].type;
-					right.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[right.Text]));
-					//SendData.sendType.Add(types[num]);
-					SendData.typeNum.Add(num);
+					weakness = leftSide.type.effective.Concat(rightSide.type.effective).ToList();
+					resistance = leftSide.type.resistance.Concat(rightSide.type.resistance).ToList();
+					immune = leftSide.type.immune.Concat(rightSide.type.immune).ToList();
+
+					weakness.Sort();
+					resistance.Sort();
+					immune.Sort();
+
+					AddTypeData.RemoveDoubles(weakness, resistance, immune);
+					AddTypeData.RemoveDoubles(resistance, weakness, immune);
 				}
-				else if (leftTurn)
+				else if (leftSide.type != null && rightSide.type == null)
 				{
-					left.Text = types[num].type;
-					left.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[left.Text]));
-					leftTurn = false;
-					gradient = (GradientDrawable)textViews[SendData.typeNum[0]].Background;
-					gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[SendData.typeNum[0]].type]));
-					SendData.typeNum[0] = num;
-					//SendData.sendType[0] = types[num];
+					weakness = leftSide.type.effective;
+					resistance = leftSide.type.resistance;
+					immune = leftSide.type.immune;
 				}
-				else if (!leftTurn)
+				else if (rightSide.type != null && leftSide.type == null)
 				{
-					right.Text = types[num].type;
-					right.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[right.Text]));
-					leftTurn = true;
-					gradient = (GradientDrawable)textViews[SendData.typeNum[1]].Background;
-					gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[SendData.typeNum[1]].type]));
-					SendData.typeNum[1] = num;
-					//SendData.sendType[1] = types[num];
+					weakness = rightSide.type.effective;
+					resistance = rightSide.type.resistance;
+					immune = rightSide.type.immune;
 				}
+
+				AddTypeData.PopulateTF(weakness, layout1, 2, this);
+				AddTypeData.PopulateTF(resistance, layout2, .5, this);
+				AddTypeData.PopulateTF(immune, layout3, 0, this);
 			}
 		}
 
-		public void removeTop(TextView top, int space)
+		public void removeChilren(LinearLayout layout)
+		{
+			if (layout.ChildCount > 0)
+				for (int i = layout.ChildCount - 1; i > 0; i--)
+					layout.RemoveViewAt(i);
+		}
+
+		public void removeTop(TextView top, SingleType side)
 		{
 			gradient.SetColor(Color.ParseColor(Colors.TypeToColor[top.Text]));
 			top.Text = "";
 			top.SetBackgroundColor(Color.Transparent);
 
-			SendData.typeNum.RemoveAt(space);
-			//SendData.sendType.RemoveAt(space);
+			side.type = null;
+			side.num = -1;
 		}
 
 		public bool GetTimeSpan(TextView TF, int num)
@@ -183,17 +199,20 @@ namespace PokemonType
 				if (clickedView == TF)
 				{
 					TimeSpan timespan = DateTime.Now - clickedTime;
-					if (timespan.Milliseconds < 300)
+					if (timespan.Milliseconds < 200)
 					{
 						var sendTypes = allTypes.attackTypes;
 
-						SendData.kind = "Attack";
-						SendData.sendType.Add(sendTypes[num]);
+						if (SendData.sendAttackType.Count > 0)
+							SendData.sendAttackType[0] = sendTypes[num];
+						else
+							SendData.sendAttackType.Add(sendTypes[num]);
+						
 						StartActivity(typeof(TypeDetailActivity));
+						return true;
 					}
 				}
 			}
-
 			clickedView = TF;
 			clickedTime = DateTime.Now;
 			return false;
