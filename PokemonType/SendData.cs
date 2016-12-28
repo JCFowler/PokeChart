@@ -11,6 +11,7 @@ namespace PokemonType
 
 	public class SendData
 	{
+		public static bool isJapanese;
 		public static List<Type> sendAttackType = new List<Type>();
 	}
 

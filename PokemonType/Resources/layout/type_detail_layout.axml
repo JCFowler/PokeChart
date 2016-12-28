@@ -5,21 +5,17 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
     android:weightSum="100">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_weight="0" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="92"
-        android:weightSum="2">
+        android:layout_weight="85">
         <TextView
             android:id="@+id/leftTop"
-            style="@style/button_text"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:id="@+id/rightTop"
             style="@style/button_text"
             android:gravity="center"
             android:layout_weight="1"
@@ -30,7 +26,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="8"
+        android:layout_weight="15"
         android:weightSum="3">
         <LinearLayout
             android:id="@+id/layout1"

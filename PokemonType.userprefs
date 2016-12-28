@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Activities/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Convert.cs">
     <Files>
-      <File FileName="PokemonType/Activities/MainActivity.cs" Line="156" Column="24" />
-      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="49" Column="42" />
-      <File FileName="PokemonType/SendData.cs" Line="13" Column="3" />
-      <File FileName="PokemonType/Resources/values/styles.xml" Line="5" Column="60" />
-      <File FileName="PokemonType/Resources/drawable/clickable.xml" Line="6" Column="30" />
+      <File FileName="PokemonType/Activities/MainActivity.cs" Line="40" Column="20" />
+      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="60" Column="66" />
+      <File FileName="PokemonType/SendData.cs" Line="11" Column="2" />
       <File FileName="PokemonType/GetTypeLists.cs" Line="16" Column="21" />
-      <File FileName="PokemonType/AddTypeData.cs" Line="17" Column="16" />
+      <File FileName="PokemonType/AddTypeData.cs" Line="17" Column="1" />
+      <File FileName="PokemonType/Colors.cs" Line="24" Column="27" />
+      <File FileName="PokemonType/Convert.cs" Line="6" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />

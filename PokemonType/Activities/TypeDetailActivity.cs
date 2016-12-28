@@ -11,34 +11,64 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V7.Widget;
 using Android.Graphics;
+using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.V7.App;
 
 namespace PokemonType
 {
-	[Activity(Label = "TypeDetailActivity")]
-	public class TypeDetailActivity : Activity
+	[Activity(Label = "TypeDetailActivity", Theme = "@style/MyTheme")]
+	public class TypeDetailActivity : AppCompatActivity
 	{
 		List<Type> types;
 		LinearLayout layout1;
 		LinearLayout layout2;
 		LinearLayout layout3;
+		List<LinearLayout> layouts = new List<LinearLayout>();
+
+		TextView leftTitle;
+		TextView middleTitle;
+		TextView rightTitle;
+
+		TextView topLeft;
+
+		protected override void OnResume()
+		{
+			base.OnResume();
+
+			if (SendData.isJapanese)
+			{
+				SupportActionBar.Title = "攻撃";
+				leftTitle.Text = "強い";
+				middleTitle.Text = "弱い";
+				rightTitle.Text = "免疫";
+			}
+			else
+			{
+				SupportActionBar.Title = "Attack";
+				leftTitle.Text = "Effective";
+				middleTitle.Text = "Weak";
+				rightTitle.Text = "Immune";
+			}
+		}
+
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.type_detail_layout);
 
-			TextView leftTitle = FindViewById<TextView>(Resource.Id.leftTitle);
-			TextView middleTitle = FindViewById<TextView>(Resource.Id.middleTitle);
-			//TextView rightTitle = FindViewById<TextView>(Resource.Id.rightTitle);
+			var toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
+			SetSupportActionBar(toolbar);
 
-			leftTitle.Text = "Effective";
-			middleTitle.Text = "Weak";
+			leftTitle = FindViewById<TextView>(Resource.Id.leftTitle);
+			middleTitle = FindViewById<TextView>(Resource.Id.middleTitle);
+			rightTitle = FindViewById<TextView>(Resource.Id.rightTitle);
 
-			TextView topLeft = FindViewById<TextView>(Resource.Id.leftTop);
-			TextView topRight = FindViewById<TextView>(Resource.Id.rightTop);
+			topLeft = FindViewById<TextView>(Resource.Id.leftTop);
 
 			layout1 = FindViewById<LinearLayout>(Resource.Id.layout1);
 			layout2 = FindViewById<LinearLayout>(Resource.Id.layout2);
 			layout3 = FindViewById<LinearLayout>(Resource.Id.layout3);
+			layouts = new List<LinearLayout>{ layout1, layout2, layout3};
 
 			List<string> weakness = SendData.sendAttackType[0].effective;
 			List<string> resistance = SendData.sendAttackType[0].resistance;
@@ -46,72 +76,68 @@ namespace PokemonType
 
 			topLeft.Text = SendData.sendAttackType[0].type;
 			topLeft.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[topLeft.Text]));
-			topRight.Visibility = ViewStates.Gone;
 
-			PopulateTF(weakness, layout1, 2);
-			PopulateTF(resistance, layout2, .5);
-			PopulateTF(immune, layout3, 0);
+			AddTypeData.PopulateTF(weakness, layout1, 2, this);
+			AddTypeData.PopulateTF(resistance, layout2, .5, this);
+			AddTypeData.PopulateTF(immune, layout3, 0, this);
 		}
 
-		void RemoveDoubles(List<string> main, List<string> first, List<string> immuneList)
+		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
-			for (int i = 0; i < main.Count; i++)
+			MenuInflater.Inflate(Resource.Menu.action_toolbar, menu);
+			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			getData();
+
+			return base.OnOptionsItemSelected(item);
+		}
+
+		public void getData()
+		{
+			SendData.isJapanese = !SendData.isJapanese;
+
+			if (SendData.isJapanese)
 			{
-				for (int j = 0; j < first.Count; j++)
+				GetTypeLists.GetJapaneseLists(Assets);
+				types = allTypes.defenseTypes;
+
+				SupportActionBar.Title = "攻撃";
+				topLeft.Text = Convert.EnglishToJapanese[topLeft.Text];
+
+				foreach (var layout in layouts)
 				{
-					if (main[i] == first[j])
+					for (int i = 0; i < layout.ChildCount; i++)
 					{
-						main.RemoveAt(i);
-						first.RemoveAt(j);
+						TextView child = (TextView)layout.GetChildAt(i);
+						string[] words = child.Text.Split(' ');
+
+						words[words.Length - 1] = Convert.EnglishToJapanese[words[words.Length - 1]];
+						child.Text = String.Join(" ", words);
 					}
 				}
 			}
-
-			for (int i = 0; i < main.Count; i++)
+			else
 			{
-				for (int j = 0; j < immuneList.Count; j++)
-				{
-					if (main[i] == immuneList[j])
-						main.RemoveAt(i);
-				}
-			}
-		}
+				GetTypeLists.GetEnglishLists(Assets);
+				types = allTypes.defenseTypes;
 
-		void PopulateTF(List<string> list, LinearLayout layout, double degree)
-		{
-			List<double> counter = new List<double>();
-			for (int i = 0; i < list.Count; i++)
-			{
-				double num = degree;
-				if (i == 0) { }
-				else if (i+1 == list.Count) { }
-				else if (list[i] == list[i - 1])
-				{
-					if (degree == .5)
-						num = degree / 2;
-					else
-						num = degree * 2;
-					list.RemoveAt(i - 1);
-				}
-				else if (list[i] == list[i + 1])
-				{
-					if (degree == .5)
-						num = degree / 2;
-					else
-						num = degree * 2;
-					list.RemoveAt(i + 1);
-				}
+				SupportActionBar.Title = "Attack";
+				topLeft.Text = Convert.JapaneseToEnglish[topLeft.Text];
 
-				counter.Add(num);
-			}
-			
-			for (int i = 0; i < list.Count; i++)
-			{
-				TextView tf = new TextView(this);
-				tf.Text = "x" + counter[i].ToString() + " " + list[i];
-				tf.Gravity = GravityFlags.Center;
-				tf.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[list[i]]));
-				layout.AddView(tf); ;
+				foreach (var layout in layouts)
+				{
+					for (int i = 0; i < layout.ChildCount; i++)
+					{
+						TextView child = (TextView)layout.GetChildAt(i);
+						string[] words = child.Text.Split(' ');
+
+						words[words.Length - 1] = Convert.JapaneseToEnglish[words[words.Length - 1]];
+						child.Text = String.Join(" ", words);
+					}
+				}
 			}
 		}
 	}

@@ -7,12 +7,15 @@ using Android.Graphics.Drawables;
 using System;
 using Android.Views;
 using System.Linq;
+using Android.Support.V7.App;
+using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace PokemonType
 {
-	[Activity(Label = "PokemonType", MainLauncher = true, Icon = "@mipmap/icon")]
-	public class MainActivity : Activity
+	[Activity(Label = "PokemonType", MainLauncher = true, Icon = "@mipmap/icon", Theme ="@style/MyTheme")]
+	public class MainActivity : AppCompatActivity
 	{
+		private bool languageChanged;
 		DateTime clickedTime;
 		TextView clickedView;
 		bool leftTurn = true;
@@ -28,11 +31,73 @@ namespace PokemonType
 		LinearLayout layout1;
 		LinearLayout layout2;
 		LinearLayout layout3;
+		List<LinearLayout> layouts = new List<LinearLayout>();
+
+		TextView leftTitle;
+		TextView middleTitle;
+		TextView rightTitle;
 
 		protected override void OnResume()
 		{
 			base.OnResume();
-			clickedView = null;
+
+			if (SendData.isJapanese != languageChanged)
+			{
+
+
+				for (int i = 0; i < allTypes.defenseTypes.Count; i++)
+					textViews[i].Text = allTypes.defenseTypes[i].type;
+
+				if (SendData.isJapanese)
+				{
+					SupportActionBar.Title = "防衛";
+					if (left.Text != "")
+						left.Text = Convert.EnglishToJapanese[left.Text];
+					if (right.Text != "")
+						right.Text = Convert.EnglishToJapanese[right.Text];
+
+					foreach (var layout in layouts)
+					{
+						if (layout.ChildCount > 1)
+						{
+							for (int i = 0; i < layout.ChildCount; i++)
+							{
+								TextView child = (TextView)layout.GetChildAt(i);
+								string[] words = child.Text.Split(' ');
+
+								words[words.Length - 1] = Convert.EnglishToJapanese[words[words.Length - 1]];
+								child.Text = String.Join(" ", words);
+							}
+						}
+					}
+				}
+				else
+				{
+					SupportActionBar.Title = "Defense";
+					if (left.Text != "")
+						left.Text = Convert.JapaneseToEnglish[left.Text];
+					if (right.Text != "")
+						right.Text = Convert.JapaneseToEnglish[right.Text];
+
+					foreach (var layout in layouts)
+					{
+						if (layout.ChildCount > 1)
+						{
+							for (int i = 0; i < layout.ChildCount; i++)
+							{
+								TextView child = (TextView)layout.GetChildAt(i);
+								string[] words = child.Text.Split(' ');
+
+								words[words.Length - 1] = Convert.JapaneseToEnglish[words[words.Length - 1]];
+								child.Text = String.Join(" ", words);
+							}
+						}
+					}
+				}
+
+
+			}
+
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -40,9 +105,16 @@ namespace PokemonType
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
 
+			var toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
+			SetSupportActionBar(toolbar);
+
 			layout1 = FindViewById<LinearLayout>(Resource.Id.layout1);
 			layout2 = FindViewById<LinearLayout>(Resource.Id.layout2);
 			layout3 = FindViewById<LinearLayout>(Resource.Id.layout3);
+			layouts = new List<LinearLayout> { layout1, layout2, layout3 };
+			leftTitle = FindViewById<TextView>(Resource.Id.leftTitle);
+			middleTitle = FindViewById<TextView>(Resource.Id.middleTitle);
+			rightTitle = FindViewById<TextView>(Resource.Id.rightTitle);
 			left = FindViewById<TextView>(Resource.Id.leftTop);
 			right = FindViewById<TextView>(Resource.Id.rightTop);
 			TextView textView1 = FindViewById<TextView>(Resource.Id.textView1);
@@ -73,7 +145,6 @@ namespace PokemonType
 			for (int i = 0; i < types.Count;i++) 
 			{
 				textViews[i].Tag = i;
-				textViews[i].Text = types[i].type;
 				textViews[i].Gravity = GravityFlags.Center;
 
 				gradient = (GradientDrawable)textViews[i].Background;
@@ -207,6 +278,8 @@ namespace PokemonType
 							SendData.sendAttackType[0] = sendTypes[num];
 						else
 							SendData.sendAttackType.Add(sendTypes[num]);
+
+						languageChanged = SendData.isJapanese;
 						
 						StartActivity(typeof(TypeDetailActivity));
 						return true;
@@ -216,6 +289,77 @@ namespace PokemonType
 			clickedView = TF;
 			clickedTime = DateTime.Now;
 			return false;
+		}
+
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			MenuInflater.Inflate(Resource.Menu.action_toolbar, menu);
+			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			getData();
+
+			return base.OnOptionsItemSelected(item);
+		}
+
+		public void getData()
+		{
+			SendData.isJapanese = !SendData.isJapanese;
+
+			if (SendData.isJapanese)
+			{
+				GetTypeLists.GetJapaneseLists(Assets);
+				types = allTypes.defenseTypes;
+
+				for (int i = 0; i < types.Count; i++)
+					textViews[i].Text = types[i].type;
+				
+				SupportActionBar.Title = "防衛";
+				if (left.Text != "")
+					left.Text = Convert.EnglishToJapanese[left.Text];
+				if (right.Text != "")
+					right.Text = Convert.EnglishToJapanese[right.Text];
+
+				foreach (var layout in layouts)
+				{
+					for (int i = 0; i < layout.ChildCount; i++)
+					{
+						TextView child = (TextView)layout.GetChildAt(i);
+						string[] words = child.Text.Split(' ');
+
+						words[words.Length - 1] = Convert.EnglishToJapanese[words[words.Length - 1]];
+						child.Text = String.Join(" ", words);
+					}
+				}
+			}
+			else
+			{
+				GetTypeLists.GetEnglishLists(Assets);
+				types = allTypes.defenseTypes;
+
+				for (int i = 0; i < types.Count; i++)
+					textViews[i].Text = types[i].type;
+
+				SupportActionBar.Title = "Defense";
+				if (left.Text != "")
+					left.Text = Convert.JapaneseToEnglish[left.Text];
+				if (right.Text != "")
+					right.Text = Convert.JapaneseToEnglish[right.Text];
+
+				foreach (var layout in layouts)
+				{
+					for (int i = 0; i < layout.ChildCount; i++)
+					{
+						TextView child = (TextView)layout.GetChildAt(i);
+						string[] words = child.Text.Split(' ');
+
+						words[words.Length - 1] = Convert.JapaneseToEnglish[words[words.Length - 1]];
+						child.Text = String.Join(" ", words);
+					}
+				}
+			}
 		}
 	}
 }
