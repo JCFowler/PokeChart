@@ -28,14 +28,11 @@ namespace PokemonType
 		SingleType leftSide = new SingleType();
 		SingleType rightSide = new SingleType();
 
+		LinearLayout mainLayout;
 		LinearLayout layout1;
 		LinearLayout layout2;
 		LinearLayout layout3;
 		List<LinearLayout> layouts = new List<LinearLayout>();
-
-		TextView leftTitle;
-		TextView middleTitle;
-		TextView rightTitle;
 
 		protected override void OnResume()
 		{
@@ -43,61 +40,20 @@ namespace PokemonType
 
 			if (SendData.isJapanese != languageChanged)
 			{
-
-
-				for (int i = 0; i < allTypes.defenseTypes.Count; i++)
-					textViews[i].Text = allTypes.defenseTypes[i].type;
-
 				if (SendData.isJapanese)
 				{
+					GetTypeLists.GetJapaneseLists(Assets);
 					SupportActionBar.Title = "防衛";
-					if (left.Text != "")
-						left.Text = Convert.EnglishToJapanese[left.Text];
-					if (right.Text != "")
-						right.Text = Convert.EnglishToJapanese[right.Text];
-
-					foreach (var layout in layouts)
-					{
-						if (layout.ChildCount > 1)
-						{
-							for (int i = 0; i < layout.ChildCount; i++)
-							{
-								TextView child = (TextView)layout.GetChildAt(i);
-								string[] words = child.Text.Split(' ');
-
-								words[words.Length - 1] = Convert.EnglishToJapanese[words[words.Length - 1]];
-								child.Text = String.Join(" ", words);
-							}
-						}
-					}
 				}
 				else
 				{
+					GetTypeLists.GetEnglishLists(Assets);
 					SupportActionBar.Title = "Defense";
-					if (left.Text != "")
-						left.Text = Convert.JapaneseToEnglish[left.Text];
-					if (right.Text != "")
-						right.Text = Convert.JapaneseToEnglish[right.Text];
-
-					foreach (var layout in layouts)
-					{
-						if (layout.ChildCount > 1)
-						{
-							for (int i = 0; i < layout.ChildCount; i++)
-							{
-								TextView child = (TextView)layout.GetChildAt(i);
-								string[] words = child.Text.Split(' ');
-
-								words[words.Length - 1] = Convert.JapaneseToEnglish[words[words.Length - 1]];
-								child.Text = String.Join(" ", words);
-							}
-						}
-					}
 				}
 
-
+				types = allTypes.defenseTypes;
+				Convert.ConvertTextViews(layouts);
 			}
-
 		}
 
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -108,13 +64,11 @@ namespace PokemonType
 			var toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
 			SetSupportActionBar(toolbar);
 
+			mainLayout = FindViewById<LinearLayout>(Resource.Id.mainLayout);
 			layout1 = FindViewById<LinearLayout>(Resource.Id.layout1);
 			layout2 = FindViewById<LinearLayout>(Resource.Id.layout2);
 			layout3 = FindViewById<LinearLayout>(Resource.Id.layout3);
-			layouts = new List<LinearLayout> { layout1, layout2, layout3 };
-			leftTitle = FindViewById<TextView>(Resource.Id.leftTitle);
-			middleTitle = FindViewById<TextView>(Resource.Id.middleTitle);
-			rightTitle = FindViewById<TextView>(Resource.Id.rightTitle);
+			layouts = new List<LinearLayout> { layout1, layout2, layout3, mainLayout };
 			left = FindViewById<TextView>(Resource.Id.leftTop);
 			right = FindViewById<TextView>(Resource.Id.rightTop);
 			TextView textView1 = FindViewById<TextView>(Resource.Id.textView1);
@@ -139,12 +93,33 @@ namespace PokemonType
 			{ textView1, textView2, textView3, textView4, textView5, textView6, textView7, textView8, textView9, textView10,
 				textView11, textView12, textView13, textView14, textView15, textView16, textView17, textView18};
 
-			GetTypeLists.GetEnglishLists(Assets);
+
+			SaveController.Instance.SetContext(this);
+			if (SaveController.GetSaveController().GetSavedLanguage() == "")
+				SaveController.GetSaveController().SetSavedLanguage("English");
+
+			if (SaveController.GetSaveController().GetSavedLanguage() == "English")
+			{
+				GetTypeLists.GetEnglishLists(Assets);
+
+				SupportActionBar.Title = "Defense";
+				SendData.isJapanese = false;
+			}
+			else if (SaveController.GetSaveController().GetSavedLanguage() == "Japanese")
+			{
+				GetTypeLists.GetJapaneseLists(Assets);
+
+				Convert.ConvertTextViews(layouts);
+				SupportActionBar.Title = "防衛";
+				SendData.isJapanese = true;
+			}
+			languageChanged = SendData.isJapanese;
 			types = allTypes.defenseTypes;
 
 			for (int i = 0; i < types.Count;i++) 
 			{
 				textViews[i].Tag = i;
+				textViews[i].Text = types[i].type;
 				textViews[i].Gravity = GravityFlags.Center;
 
 				gradient = (GradientDrawable)textViews[i].Background;
@@ -296,11 +271,9 @@ namespace PokemonType
 			MenuInflater.Inflate(Resource.Menu.action_toolbar, menu);
 			return base.OnCreateOptionsMenu(menu);
 		}
-
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
 			getData();
-
 			return base.OnOptionsItemSelected(item);
 		}
 
@@ -311,56 +284,18 @@ namespace PokemonType
 			if (SendData.isJapanese)
 			{
 				GetTypeLists.GetJapaneseLists(Assets);
-				types = allTypes.defenseTypes;
-
-				for (int i = 0; i < types.Count; i++)
-					textViews[i].Text = types[i].type;
-				
 				SupportActionBar.Title = "防衛";
-				if (left.Text != "")
-					left.Text = Convert.EnglishToJapanese[left.Text];
-				if (right.Text != "")
-					right.Text = Convert.EnglishToJapanese[right.Text];
-
-				foreach (var layout in layouts)
-				{
-					for (int i = 0; i < layout.ChildCount; i++)
-					{
-						TextView child = (TextView)layout.GetChildAt(i);
-						string[] words = child.Text.Split(' ');
-
-						words[words.Length - 1] = Convert.EnglishToJapanese[words[words.Length - 1]];
-						child.Text = String.Join(" ", words);
-					}
-				}
+				SaveController.GetSaveController().SetSavedLanguage("Japanese");
 			}
 			else
 			{
 				GetTypeLists.GetEnglishLists(Assets);
-				types = allTypes.defenseTypes;
-
-				for (int i = 0; i < types.Count; i++)
-					textViews[i].Text = types[i].type;
-
 				SupportActionBar.Title = "Defense";
-				if (left.Text != "")
-					left.Text = Convert.JapaneseToEnglish[left.Text];
-				if (right.Text != "")
-					right.Text = Convert.JapaneseToEnglish[right.Text];
-
-				foreach (var layout in layouts)
-				{
-					for (int i = 0; i < layout.ChildCount; i++)
-					{
-						TextView child = (TextView)layout.GetChildAt(i);
-						string[] words = child.Text.Split(' ');
-
-						words[words.Length - 1] = Convert.JapaneseToEnglish[words[words.Length - 1]];
-						child.Text = String.Join(" ", words);
-					}
-				}
+				SaveController.GetSaveController().SetSavedLanguage("English");
 			}
+
+			types = allTypes.defenseTypes;
+			Convert.ConvertTextViews(layouts);
 		}
 	}
 }
-

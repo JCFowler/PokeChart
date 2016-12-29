@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Android.Graphics;
 using Android.Views;
 using Android.Widget;
@@ -10,26 +11,52 @@ namespace PokemonType
 	{
 		public static void RemoveDoubles(List<string> main, List<string> first, List<string> immuneList)
 		{
-			for (int i = 0; i < main.Count; i++)
+			var mainSts = new List<string>();
+			var firstSts = new List<string>();
+
+			foreach (var m in main)
 			{
-				for (int j = 0; j < first.Count; j++)
+				foreach (var f in first)
 				{
-					if (main[i] == first[j])
+					if (m == f)
 					{
-						main.RemoveAt(i);
-						first.RemoveAt(j);
+						mainSts.Add(m);
+						firstSts.Add(f);
 					}
 				}
 			}
+			foreach (var s in mainSts)
+				main.Remove(s);
+			foreach (var s in firstSts)
+				first.Remove(s);
 
-			for (int i = main.Count - 1; i > 0; i--)
+
+			mainSts.Clear();
+			foreach (var m in main)
 			{
-				for (int j = immuneList.Count - 1; j > 0; j--)
+				foreach (var i in immuneList)
 				{
-					if (main[i] == immuneList[j])
-						main.RemoveAt(i);
+					if (m == i)
+					{
+						mainSts.Add(m);
+					}
 				}
 			}
+			foreach (var s in mainSts)
+				main.Remove(s);
+
+			//for (int i = 0; i < main.Count; i++)
+			//{
+			//	for (int j = 0; j < immuneList.Count; j++)
+			//	{
+			//		try
+			//		{
+			//			if (main[i] == immuneList[j])
+			//				main.RemoveAt(i);
+			//		}
+			//		catch { }
+			//	}
+			//}
 		}
 
 		public static void PopulateTF(List<string> list, LinearLayout layout, double degree, Android.Content.Context owner)
@@ -39,7 +66,6 @@ namespace PokemonType
 			{
 				double num = degree;
 				if (i == 0) { }
-				else if (i + 1 == list.Count) { }
 				else if (list[i] == list[i - 1])
 				{
 					if (degree == .5)
@@ -47,7 +73,10 @@ namespace PokemonType
 					else
 						num = degree * 2;
 					list.RemoveAt(i - 1);
+					counter.RemoveAt(i - 1);
+					i--;
 				}
+				else if (i + 1 == list.Count) { }
 				else if (list[i] == list[i + 1])
 				{
 					if (degree == .5)

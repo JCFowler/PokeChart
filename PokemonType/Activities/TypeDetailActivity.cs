@@ -19,7 +19,6 @@ namespace PokemonType
 	[Activity(Label = "TypeDetailActivity", Theme = "@style/MyTheme")]
 	public class TypeDetailActivity : AppCompatActivity
 	{
-		List<Type> types;
 		LinearLayout layout1;
 		LinearLayout layout2;
 		LinearLayout layout3;
@@ -102,42 +101,20 @@ namespace PokemonType
 			if (SendData.isJapanese)
 			{
 				GetTypeLists.GetJapaneseLists(Assets);
-				types = allTypes.defenseTypes;
 
 				SupportActionBar.Title = "攻撃";
-				topLeft.Text = Convert.EnglishToJapanese[topLeft.Text];
-
-				foreach (var layout in layouts)
-				{
-					for (int i = 0; i < layout.ChildCount; i++)
-					{
-						TextView child = (TextView)layout.GetChildAt(i);
-						string[] words = child.Text.Split(' ');
-
-						words[words.Length - 1] = Convert.EnglishToJapanese[words[words.Length - 1]];
-						child.Text = String.Join(" ", words);
-					}
-				}
+				SaveController.GetSaveController().SetSavedLanguage("Japanese");
+				topLeft.Text = Convert.LanguageDic[topLeft.Text];
+				Convert.ConvertTextViews(layouts);
 			}
 			else
 			{
 				GetTypeLists.GetEnglishLists(Assets);
-				types = allTypes.defenseTypes;
 
 				SupportActionBar.Title = "Attack";
-				topLeft.Text = Convert.JapaneseToEnglish[topLeft.Text];
-
-				foreach (var layout in layouts)
-				{
-					for (int i = 0; i < layout.ChildCount; i++)
-					{
-						TextView child = (TextView)layout.GetChildAt(i);
-						string[] words = child.Text.Split(' ');
-
-						words[words.Length - 1] = Convert.JapaneseToEnglish[words[words.Length - 1]];
-						child.Text = String.Join(" ", words);
-					}
-				}
+				SaveController.GetSaveController().SetSavedLanguage("English");
+				topLeft.Text = Convert.LanguageDic[topLeft.Text];
+				Convert.ConvertTextViews(layouts);
 			}
 		}
 	}

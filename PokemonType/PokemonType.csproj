@@ -89,6 +89,7 @@
     <Compile Include="GetTypeLists.cs" />
     <Compile Include="AddTypeData.cs" />
     <Compile Include="Convert.cs" />
+    <Compile Include="SaveController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

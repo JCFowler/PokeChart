@@ -18,6 +18,6 @@ namespace PokemonType
 	public class SingleType
 	{
 		public Type type = new Type();
-		public int num;
+		public int num = -1;
 	}
 }
