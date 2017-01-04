@@ -13,6 +13,9 @@ namespace PokemonType
 	{
 		public static bool isJapanese;
 		public static List<Type> sendAttackType = new List<Type>();
+
+		public static int typeTextSize;
+		public static int SDKNum;
 	}
 
 	public class SingleType

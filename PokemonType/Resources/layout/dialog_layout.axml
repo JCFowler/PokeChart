@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+    <TextView
+        android:id="@+id/attackText"
+        android:gravity="center_horizontal"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="36dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/leftTop"
+        style="@style/button_text"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3">
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:id="@+id/leftTitle"
+                android:text="Weakness"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:id="@+id/middleTitle"
+                android:text="Resistance"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:minWidth="25px"
+            android:minHeight="25px">
+            <TextView
+                android:id="@+id/rightTitle"
+                android:text="Immune"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

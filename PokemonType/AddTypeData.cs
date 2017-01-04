@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.Views;
 using Android.Widget;
 
@@ -10,6 +11,12 @@ namespace PokemonType
 	public class AddTypeData
 	{
 		public static void RemoveDoubles(List<string> main, List<string> first, List<string> immuneList)
+		{
+			Doubles(main, first, immuneList);
+			Doubles(first, main, immuneList);
+		}
+
+		private static void Doubles(List<string> main, List<string> first, List<string> immuneList)
 		{
 			var mainSts = new List<string>();
 			var firstSts = new List<string>();
@@ -44,19 +51,6 @@ namespace PokemonType
 			}
 			foreach (var s in mainSts)
 				main.Remove(s);
-
-			//for (int i = 0; i < main.Count; i++)
-			//{
-			//	for (int j = 0; j < immuneList.Count; j++)
-			//	{
-			//		try
-			//		{
-			//			if (main[i] == immuneList[j])
-			//				main.RemoveAt(i);
-			//		}
-			//		catch { }
-			//	}
-			//}
 		}
 
 		public static void PopulateTF(List<string> list, LinearLayout layout, double degree, Android.Content.Context owner)
@@ -93,6 +87,16 @@ namespace PokemonType
 			{
 				TextView tf = new TextView(owner);
 
+				tf.SetBackgroundResource(Resource.Drawable.types);
+
+				var gradient = (GradientDrawable)tf.Background;
+				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[list[i]]));
+
+				if (SendData.SDKNum < 23)
+					tf.SetTextAppearance(owner, Resource.Style.type_text);
+				else
+					tf.SetTextAppearance(Resource.Style.type_text);
+
 				if (counter[i] > 2 || counter[i] < 0.5)
 				{
 					tf.SetTypeface(null, TypefaceStyle.Bold);
@@ -102,7 +106,16 @@ namespace PokemonType
 					tf.Text = "x" + counter[i].ToString() + " " + list[i];
 				tf.SetTextSize(Android.Util.ComplexUnitType.Dip, 16);
 				tf.Gravity = GravityFlags.Center;
-				tf.SetBackgroundColor(Color.ParseColor(Colors.TypeToColor[list[i]]));
+
+				LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.WrapContent);
+				llp.SetMargins(3, 0, 3, 5);
+				tf.LayoutParameters = llp;
+
+				tf.SetPadding(0, 0, 0, 10);
+
+				tf.Measure(0, 0);
+				SendData.typeTextSize = tf.MeasuredHeight;
+
 				layout.AddView(tf); ;
 			}
 		}

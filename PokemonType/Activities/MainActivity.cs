@@ -61,6 +61,8 @@ namespace PokemonType
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
 
+			SendData.SDKNum = (int)Build.VERSION.SdkInt;
+
 			var toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
 			SetSupportActionBar(toolbar);
 
@@ -116,7 +118,7 @@ namespace PokemonType
 			languageChanged = SendData.isJapanese;
 			types = allTypes.defenseTypes;
 
-			for (int i = 0; i < types.Count;i++) 
+			for (int i = 0; i < types.Count; i++)
 			{
 				textViews[i].Tag = i;
 				textViews[i].Text = types[i].type;
@@ -200,7 +202,6 @@ namespace PokemonType
 					immune.Sort();
 
 					AddTypeData.RemoveDoubles(weakness, resistance, immune);
-					AddTypeData.RemoveDoubles(resistance, weakness, immune);
 				}
 				else if (leftSide.type != null && rightSide.type == null)
 				{
@@ -255,8 +256,12 @@ namespace PokemonType
 							SendData.sendAttackType.Add(sendTypes[num]);
 
 						languageChanged = SendData.isJapanese;
+
+						FragmentTransaction transaction = FragmentManager.BeginTransaction();
+						DialogType dialog = new DialogType(this);
+						dialog.Show(transaction, "Attack Type");
 						
-						StartActivity(typeof(TypeDetailActivity));
+						//StartActivity(typeof(TypeDetailActivity));
 						return true;
 					}
 				}

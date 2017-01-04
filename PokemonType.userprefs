@@ -1,21 +1,21 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/AddTypeData.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="PokemonType/Activities/MainActivity.cs" Line="28" Column="13" />
-      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="39" Column="33" />
-      <File FileName="PokemonType/SendData.cs" Line="19" Column="3" />
-      <File FileName="PokemonType/GetTypeLists.cs" Line="16" Column="21" />
-      <File FileName="PokemonType/AddTypeData.cs" Line="15" Column="24" />
+      <File FileName="PokemonType/Activities/MainActivity.cs" Line="258" Column="45" />
+      <File FileName="PokemonType/Activities/TypeDetailActivity.cs" Line="99" Column="47" />
+      <File FileName="PokemonType/DialogType.cs" Line="71" Column="30" />
+      <File FileName="PokemonType/AddTypeData.cs" Line="117" Column="5" />
       <File FileName="PokemonType/Convert.cs" Line="111" Column="1" />
       <File FileName="PokemonType/SaveController.cs" Line="24" Column="4" />
+      <File FileName="PokemonType/Resources/values/styles.xml" Line="40" Column="3" />
+      <File FileName="PokemonType/Resources/drawable/clickable.xml" Line="1" Column="1" />
+      <File FileName="PokemonType/Resources/drawable/types.xml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/AddTypeData.cs" line="18" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
