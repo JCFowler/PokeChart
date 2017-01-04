@@ -123,6 +123,11 @@ namespace PokemonType
 				textViews[i].Tag = i;
 				textViews[i].Text = types[i].type;
 				textViews[i].Gravity = GravityFlags.Center;
+				textViews[i].SetPadding(0, 0, 0, 10);
+
+				int h = Resources.DisplayMetrics.HeightPixels / 100;
+
+				textViews[i].SetTextSize(Android.Util.ComplexUnitType.Dip, h + 15);
 
 				gradient = (GradientDrawable)textViews[i].Background;
 				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[i].type]));
