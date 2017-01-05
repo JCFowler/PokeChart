@@ -12,10 +12,9 @@ using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace PokemonType
 {
-	[Activity(Label = "PokemonType", MainLauncher = true, Icon = "@mipmap/icon", Theme ="@style/MyTheme")]
+	[Activity(Label = "PokemonType", Icon = "@mipmap/icon", Theme ="@style/MyTheme")]
 	public class MainActivity : AppCompatActivity
 	{
-		private bool languageChanged;
 		DateTime clickedTime;
 		TextView clickedView;
 		bool leftTurn = true;
@@ -34,34 +33,10 @@ namespace PokemonType
 		LinearLayout layout3;
 		List<LinearLayout> layouts = new List<LinearLayout>();
 
-		protected override void OnResume()
-		{
-			base.OnResume();
-
-			if (SendData.isJapanese != languageChanged)
-			{
-				if (SendData.isJapanese)
-				{
-					GetTypeLists.GetJapaneseLists(Assets);
-					SupportActionBar.Title = "防衛";
-				}
-				else
-				{
-					GetTypeLists.GetEnglishLists(Assets);
-					SupportActionBar.Title = "Defense";
-				}
-
-				types = allTypes.defenseTypes;
-				Convert.ConvertTextViews(layouts);
-			}
-		}
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.Main);
-
-			SendData.SDKNum = (int)Build.VERSION.SdkInt;
 
 			var toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
 			SetSupportActionBar(toolbar);
@@ -95,27 +70,15 @@ namespace PokemonType
 			{ textView1, textView2, textView3, textView4, textView5, textView6, textView7, textView8, textView9, textView10,
 				textView11, textView12, textView13, textView14, textView15, textView16, textView17, textView18};
 
-
-			SaveController.Instance.SetContext(this);
-			if (SaveController.GetSaveController().GetSavedLanguage() == "")
-				SaveController.GetSaveController().SetSavedLanguage("English");
-
-			if (SaveController.GetSaveController().GetSavedLanguage() == "English")
+			if (SendData.isJapanese)
 			{
-				GetTypeLists.GetEnglishLists(Assets);
-
-				SupportActionBar.Title = "Defense";
-				SendData.isJapanese = false;
-			}
-			else if (SaveController.GetSaveController().GetSavedLanguage() == "Japanese")
-			{
-				GetTypeLists.GetJapaneseLists(Assets);
-
 				Convert.ConvertTextViews(layouts);
 				SupportActionBar.Title = "防衛";
-				SendData.isJapanese = true;
+				SupportActionBar.Title = "Defense";
 			}
-			languageChanged = SendData.isJapanese;
+			else
+				SupportActionBar.Title = "Defense";
+			
 			types = allTypes.defenseTypes;
 
 			for (int i = 0; i < types.Count; i++)
@@ -133,6 +96,13 @@ namespace PokemonType
 				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[i].type]));
 
 				textViews[i].Click += Handle_Click;
+			}
+
+			if (SendData.showHelp)
+			{
+				FragmentTransaction transaction = FragmentManager.BeginTransaction();
+				DialogHelp dialog = new DialogHelp();
+				dialog.Show(transaction, "Help");
 			}
 		}
 
@@ -260,13 +230,9 @@ namespace PokemonType
 						else
 							SendData.sendAttackType.Add(sendTypes[num]);
 
-						languageChanged = SendData.isJapanese;
-
 						FragmentTransaction transaction = FragmentManager.BeginTransaction();
 						DialogType dialog = new DialogType(this);
 						dialog.Show(transaction, "Attack Type");
-						
-						//StartActivity(typeof(TypeDetailActivity));
 						return true;
 					}
 				}
@@ -283,29 +249,36 @@ namespace PokemonType
 		}
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
-			getData();
+			switch (item.ItemId)
+			{
+				case Resource.Id.action_language:
+					SendData.isJapanese = !SendData.isJapanese;
+
+					if (SendData.isJapanese)
+					{
+						GetTypeLists.GetJapaneseLists(Assets);
+						SupportActionBar.Title = "防衛";
+						SaveController.GetSaveController().SetSavedLanguage("Japanese");
+					}
+					else
+					{
+						GetTypeLists.GetEnglishLists(Assets);
+						SupportActionBar.Title = "Defense";
+						SaveController.GetSaveController().SetSavedLanguage("English");
+					}
+
+					types = allTypes.defenseTypes;
+					Convert.ConvertInsideTypes(leftSide, rightSide);
+					Convert.ConvertTextViews(layouts);
+					break;
+				case Resource.Id.action_help:
+					FragmentTransaction transaction = FragmentManager.BeginTransaction();
+					DialogHelp dialog = new DialogHelp();
+					dialog.Show(transaction, "Help");
+					break;
+			}
+
 			return base.OnOptionsItemSelected(item);
-		}
-
-		public void getData()
-		{
-			SendData.isJapanese = !SendData.isJapanese;
-
-			if (SendData.isJapanese)
-			{
-				GetTypeLists.GetJapaneseLists(Assets);
-				SupportActionBar.Title = "防衛";
-				SaveController.GetSaveController().SetSavedLanguage("Japanese");
-			}
-			else
-			{
-				GetTypeLists.GetEnglishLists(Assets);
-				SupportActionBar.Title = "Defense";
-				SaveController.GetSaveController().SetSavedLanguage("English");
-			}
-
-			types = allTypes.defenseTypes;
-			Convert.ConvertTextViews(layouts);
 		}
 	}
 }

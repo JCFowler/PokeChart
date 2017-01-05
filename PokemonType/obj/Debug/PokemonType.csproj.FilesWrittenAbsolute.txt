@@ -36,3 +36,12 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/buttonselector.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/dialog_layout.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/text.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/splash_screen.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/splash_logo.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-hdpi/pokeball.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-mdpi/pokeball.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xhdpi/pokeball.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xxhdpi/pokeball.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xxxhdpi/pokeball.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/help_layout.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/ic_help.png

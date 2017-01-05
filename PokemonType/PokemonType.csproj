@@ -91,7 +91,9 @@
     <Compile Include="AddTypeData.cs" />
     <Compile Include="Convert.cs" />
     <Compile Include="SaveController.cs" />
-    <Compile Include="DialogType.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
+    <Compile Include="Dialogs\DialogType.cs" />
+    <Compile Include="Dialogs\DialogHelp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -118,12 +120,22 @@
     <AndroidResource Include="Resources\drawable\buttonSelector.xml" />
     <AndroidResource Include="Resources\layout\dialog_layout.axml" />
     <AndroidResource Include="Resources\layout\text.axml" />
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\splash_logo.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\pokeball.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\pokeball.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\pokeball.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\pokeball.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\pokeball.png" />
+    <AndroidResource Include="Resources\layout\help_layout.axml" />
+    <AndroidResource Include="Resources\drawable\ic_help.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Activities\" />
     <Folder Include="values-v21\" />
     <Folder Include="Resources\Menu\" />
+    <Folder Include="Dialogs\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="AttackTypeChart.txt" />

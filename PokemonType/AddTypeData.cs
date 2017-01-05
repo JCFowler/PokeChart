@@ -37,7 +37,6 @@ namespace PokemonType
 			foreach (var s in firstSts)
 				first.Remove(s);
 
-
 			mainSts.Clear();
 			foreach (var m in main)
 			{
@@ -107,7 +106,7 @@ namespace PokemonType
 				tf.SetTextSize(Android.Util.ComplexUnitType.Dip, 16);
 				tf.Gravity = GravityFlags.Center;
 
-				LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.WrapContent);
+				LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MatchParent, ViewGroup.LayoutParams.WrapContent);
 				llp.SetMargins(3, 0, 3, 5);
 				tf.LayoutParameters = llp;
 

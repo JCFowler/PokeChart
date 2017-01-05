@@ -7,4 +7,8 @@
 			android:icon="@drawable/ic_language"
 			android:title="Language"
 			myapp:showAsAction="always"/>
+	<item android:id="@+id/action_help"
+			android:icon="@drawable/ic_help"
+			android:title="Help"
+			myapp:showAsAction="always"/>
 </menu>

@@ -111,5 +111,21 @@ namespace PokemonType
 				words[words.Length - 1] = Convert.LanguageDic[words[words.Length - 1]];
 			child.Text = String.Join(" ", words);
 		}
+
+		public static void ConvertInsideTypes(SingleType left, SingleType right)
+		{
+			changeInside(left);
+			changeInside(right);
+		}
+
+		private static void changeInside(SingleType mType)
+		{
+			for (int i = 0; i < mType.type.effective.Count;i++)
+				mType.type.effective[i] = LanguageDic[mType.type.effective[i]];
+			for (int i = 0; i < mType.type.resistance.Count; i++)
+				mType.type.resistance[i] = LanguageDic[mType.type.resistance[i]];
+			for (int i = 0; i < mType.type.immune.Count; i++)
+				mType.type.immune[i] = LanguageDic[mType.type.immune[i]];
+		}
 	}
 }

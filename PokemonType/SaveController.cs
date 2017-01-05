@@ -28,6 +28,11 @@ namespace PokemonType
 			context = context_in;
 		}
 
+		public static SaveController GetSaveController()
+		{
+			return _instance;
+		}
+
 		public void SetSavedLanguage(string language)
 		{
 			var prefs = context.GetSharedPreferences("pref", FileCreationMode.Private);
@@ -43,9 +48,19 @@ namespace PokemonType
 			return token;
 		}
 
-		public static SaveController GetSaveController()
+		public void SetSavedHelp(string help)
 		{
-			return _instance;
+			var prefs = context.GetSharedPreferences("pref", FileCreationMode.Private);
+			var editor = prefs.Edit();
+			editor.PutString("Help", help);
+			editor.Commit();
+		}
+
+		public string GetSavedHelp()
+		{
+			var prefs = context.GetSharedPreferences("pref", FileCreationMode.Private);
+			string token = prefs.GetString("Help", "");
+			return token;
 		}
 	}
 

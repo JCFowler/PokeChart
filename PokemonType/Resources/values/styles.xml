@@ -46,4 +46,16 @@
     <item name="android:layout_margin" >3dp</item>
     <item name="android:textSize" >10dp</item>
   </style>
+
+<style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+</style>
+
+<style name="MyTheme" parent="MyTheme.Base">
+</style>
+
+<style name="MyTheme.Splash" parent ="Theme.AppCompat.Light">
+<item name="android:windowBackground">@drawable/splash_screen</item>
+<item name="android:windowNoTitle">true</item>  
+</style>
+	
 </resources>

@@ -14,7 +14,6 @@ namespace PokemonType
 		LinearLayout layout1;
 		LinearLayout layout2;
 		LinearLayout layout3;
-		List<LinearLayout> layouts = new List<LinearLayout>();
 
 		TextView leftTitle;
 		TextView middleTitle;
@@ -46,7 +45,6 @@ namespace PokemonType
 			layout1 = view.FindViewById<LinearLayout>(Resource.Id.layout1);
 			layout2 = view.FindViewById<LinearLayout>(Resource.Id.layout2);
 			layout3 = view.FindViewById<LinearLayout>(Resource.Id.layout3);
-			layouts = new List<LinearLayout> { layout1, layout2, layout3 };
 
 			List<string> weakness = SendData.sendAttackType[0].effective;
 			List<string> resistance = SendData.sendAttackType[0].resistance;
