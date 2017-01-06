@@ -90,7 +90,7 @@ namespace PokemonType
 
 				int h = Resources.DisplayMetrics.HeightPixels / 100;
 
-				textViews[i].SetTextSize(Android.Util.ComplexUnitType.Dip, h + 15);
+				textViews[i].SetTextSize(Android.Util.ComplexUnitType.Dip, h + 11);
 
 				gradient = (GradientDrawable)textViews[i].Background;
 				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[i].type]));

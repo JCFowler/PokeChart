@@ -24,10 +24,25 @@ namespace PokemonType
 			btnOk = view.FindViewById<Button>(Resource.Id.btnOk);
 			check = view.FindViewById<CheckBox>(Resource.Id.checkBox1);
 
+			TextView textDouble = view.FindViewById<TextView>(Resource.Id.text_double);
+			TextView textLanguage = view.FindViewById<TextView>(Resource.Id.text_language);
+			TextView textHelp = view.FindViewById<TextView>(Resource.Id.text_help);
+
 			if (!SendData.showHelp)
 				check.Checked = true;
 
-			btnOk.Click += BtnOk_Click;
+			if (SendData.isJapanese)
+			{
+				textDouble.Text = "Japanese";
+				textLanguage.Text = "Japanese";
+				textHelp.Text = "Japanese";
+				check.Text = "Japanese";
+			}
+
+			btnOk.Click += (sender, e) =>
+			{
+				Dismiss();
+			};
 
 			return view;
 		}
@@ -41,22 +56,24 @@ namespace PokemonType
 			int h = btnOk.MeasuredHeight * 8;
 
 			int w = Resources.DisplayMetrics.WidthPixels;
-			//int h = Resources.DisplayMetrics.HeightPixels;
 
 			Dialog.Window.SetLayout(w - 50, h);
 		}
 
-		void BtnOk_Click(object sender, EventArgs e)
+		public override void OnDismiss(Android.Content.IDialogInterface dialog)
 		{
+			base.OnDismiss(dialog);
+
 			if (check.Checked)
 			{
 				SaveController.GetSaveController().SetSavedHelp("Stop");
 				SendData.showHelp = false;
 			}
 			else
+			{
 				SaveController.GetSaveController().SetSavedHelp("Show");
-			
-			Dismiss();
+				SendData.showHelp = true;
+			}
 		}
 	}
 }

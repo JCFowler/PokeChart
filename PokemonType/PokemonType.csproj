@@ -129,6 +129,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\pokeball.png" />
     <AndroidResource Include="Resources\layout\help_layout.axml" />
     <AndroidResource Include="Resources\drawable\ic_help.png" />
+    <AndroidResource Include="Resources\drawable\helpButton.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

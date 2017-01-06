@@ -12,6 +12,7 @@ public class DialogHelp
 		__md_methods = 
 			"n_onCreateView:(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;:GetOnCreateView_Landroid_view_LayoutInflater_Landroid_view_ViewGroup_Landroid_os_Bundle_Handler\n" +
 			"n_onResume:()V:GetOnResumeHandler\n" +
+			"n_onDismiss:(Landroid/content/DialogInterface;)V:GetOnDismiss_Landroid_content_DialogInterface_Handler\n" +
 			"";
 		mono.android.Runtime.register ("PokemonType.DialogHelp, PokemonType, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", DialogHelp.class, __md_methods);
 	}
@@ -39,6 +40,14 @@ public class DialogHelp
 	}
 
 	private native void n_onResume ();
+
+
+	public void onDismiss (android.content.DialogInterface p0)
+	{
+		n_onDismiss (p0);
+	}
+
+	private native void n_onDismiss (android.content.DialogInterface p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

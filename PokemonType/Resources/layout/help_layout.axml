@@ -3,10 +3,18 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text_double"
+        android:text="@string/help_double_click"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="15dp"
         android:layout_width="match_parent"
@@ -26,7 +34,7 @@
         <TextView
             android:id="@+id/text_language"
             android:text="@string/help_language"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -34,7 +42,7 @@
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_margin="5dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:weightSum="100">
@@ -52,31 +60,28 @@
         <TextView
             android:id="@+id/text_help"
             android:text="@string/help_help_menu"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="20dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="80" />
     </LinearLayout>
-    <TextView
-        android:text="@string/help_double_click"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/textView1" />
     <CheckBox
         android:text="@string/dont_show"
         android:textSize="20dp"
-        android:layout_margin="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/checkBox1" />
     <Button
         android:id="@+id/btnOk"
+        android:textColor="#FFFFFF"
         android:text="OK"
+        android:background="@drawable/helpButton"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_width="match_parent"
