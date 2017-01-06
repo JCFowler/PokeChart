@@ -1,41 +1,16 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Resources/drawable/helpButton.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Dialogs/DialogType.cs">
     <Files>
-      <File FileName="PokemonType/Activities/MainActivity.cs" Line="73" Column="4" />
-      <File FileName="PokemonType/AddTypeData.cs" Line="12" Column="3" />
-      <File FileName="PokemonType/Dialogs/DialogType.cs" Line="83" Column="4" />
-      <File FileName="PokemonType/Dialogs/DialogHelp.cs" Line="22" Column="1" />
-      <File FileName="PokemonType/Resources/drawable/clickable.xml" Line="9" Column="34" />
-      <File FileName="PokemonType/Resources/values/Strings.xml" Line="8" Column="47" />
-      <File FileName="PokemonType/Resources/Menu/action_toolbar.xml" Line="11" Column="36" />
-      <File FileName="PokemonType/Activities/SplashActivity.cs" Line="21" Column="4" />
-      <File FileName="PokemonType/SendData.cs" Line="13" Column="3" />
-      <File FileName="PokemonType/SaveController.cs" Line="49" Column="4" />
-      <File FileName="PokemonType/Resources/drawable/helpButton.xml" Line="4" Column="34" />
-      <File FileName="PokemonType/Resources/values/styles.xml" Line="13" Column="38" />
+      <File FileName="PokemonType/Activities/MainActivity.cs" Line="77" Column="35" />
+      <File FileName="PokemonType/Activities/SplashActivity.cs" Line="35" Column="1" />
+      <File FileName="PokemonType/SendData.cs" Line="19" Column="28" />
+      <File FileName="PokemonType/Properties/AndroidManifest.xml" Line="7" Column="177" />
+      <File FileName="PokemonType/Resources/values/Strings.xml" Line="8" Column="56" />
+      <File FileName="PokemonType/Dialogs/DialogHelp.cs" Line="40" Column="5" />
+      <File FileName="PokemonType/Dialogs/DialogType.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="PokemonType" expanded="True">
-            <Node name="PokemonType" expanded="True">
-              <Node name="Activities" expanded="True" />
-              <Node name="Dialogs" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True">
-                  <Node name="helpButton.xml" selected="True" />
-                </Node>
-                <Node name="layout" expanded="True" />
-                <Node name="Menu" expanded="True" />
-                <Node name="values" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

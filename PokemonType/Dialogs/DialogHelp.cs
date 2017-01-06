@@ -33,10 +33,10 @@ namespace PokemonType
 
 			if (SendData.isJapanese)
 			{
-				textDouble.Text = "Japanese";
-				textLanguage.Text = "Japanese";
-				textHelp.Text = "Japanese";
-				check.Text = "Japanese";
+				textDouble.Text = "攻撃タイプをみたい場合は、ダブルクリックしてください。";
+				textLanguage.Text = "言語変更（英語、日本語）";
+				textHelp.Text = "このニューを表示する";
+				check.Text = "開始時には表示しない。";
 			}
 
 			btnOk.Click += (sender, e) =>

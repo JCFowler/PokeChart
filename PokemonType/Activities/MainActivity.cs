@@ -9,10 +9,11 @@ using Android.Views;
 using System.Linq;
 using Android.Support.V7.App;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Gms.Ads;
 
 namespace PokemonType
 {
-	[Activity(Label = "PokemonType", Icon = "@mipmap/icon", Theme ="@style/MyTheme")]
+	[Activity(Theme ="@style/MyTheme")]
 	public class MainActivity : AppCompatActivity
 	{
 		DateTime clickedTime;
@@ -74,7 +75,6 @@ namespace PokemonType
 			{
 				Convert.ConvertTextViews(layouts);
 				SupportActionBar.Title = "防衛";
-				SupportActionBar.Title = "Defense";
 			}
 			else
 				SupportActionBar.Title = "Defense";
@@ -104,6 +104,25 @@ namespace PokemonType
 				DialogHelp dialog = new DialogHelp();
 				dialog.Show(transaction, "Help");
 			}
+
+			var adLayout = FindViewById<LinearLayout>(Resource.Id.googleAds);
+
+			if (SendData.isConnected)
+			{
+				//var mAdView = FindViewById<AdView>(Resource.Id.adView);
+				//var adRequest = new AdRequest.Builder().Build();
+				//mAdView.LoadAd(adRequest);
+
+				var ad = new AdView(this);
+				ad.AdSize = AdSize.SmartBanner;
+				//ad.AdUnitId = "ca-app-pub-3940256099942544/6300978111";
+				ad.AdUnitId = "ca-app-pub-2288808768882490/2788554960";
+				var requestBuilder = new AdRequest.Builder();
+				ad.LoadAd(requestBuilder.Build());
+				adLayout.AddView(ad);
+			}
+			else
+				mainLayout.RemoveView(adLayout);
 		}
 
 		void Handle_Click(object sender, EventArgs e)

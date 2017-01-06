@@ -17,6 +17,7 @@ namespace PokemonType
 
 		public static int typeTextSize;
 		public static int SDKNum;
+		public static bool isConnected;
 	}
 
 	public class SingleType

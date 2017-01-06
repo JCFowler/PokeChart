@@ -77,16 +77,35 @@
     <Reference Include="Xamarin.Android.Support.v7.AppCompat">
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Ads.Lite">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Ads.Lite.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Ads.Lite.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Gass">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Gass.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Gass.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Tasks">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Tasks.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Clearcut">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Clearcut.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Clearcut.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Ads">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Ads.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Ads.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pokemon.cs" />
-    <Compile Include="Enums.cs" />
     <Compile Include="Colors.cs" />
     <Compile Include="SendData.cs" />
     <Compile Include="Activities\MainActivity.cs" />
-    <Compile Include="Activities\TypeDetailActivity.cs" />
     <Compile Include="GetTypeLists.cs" />
     <Compile Include="AddTypeData.cs" />
     <Compile Include="Convert.cs" />
@@ -98,19 +117,12 @@
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
     <None Include="values-v21\styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\layout\type_detail_layout.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\clickable.xml" />
     <AndroidResource Include="Resources\layout\toolbar.axml" />
@@ -119,7 +131,6 @@
     <AndroidResource Include="Resources\drawable\types.xml" />
     <AndroidResource Include="Resources\drawable\buttonSelector.xml" />
     <AndroidResource Include="Resources\layout\dialog_layout.axml" />
-    <AndroidResource Include="Resources\layout\text.axml" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
     <AndroidResource Include="Resources\drawable\splash_logo.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\pokeball.png" />
@@ -139,11 +150,12 @@
     <Folder Include="Dialogs\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="AttackTypeChart.txt" />
-    <AndroidAsset Include="DefenseTypeChart.txt" />
-    <AndroidAsset Include="JapaneseAttackType.txt" />
-    <AndroidAsset Include="JapaneseDefenseType.txt" />
+    <AndroidAsset Include="Assets\AttackTypeChart.txt" />
+    <AndroidAsset Include="Assets\DefenseTypeChart.txt" />
+    <AndroidAsset Include="Assets\JapaneseAttackType.txt" />
+    <AndroidAsset Include="Assets\JapaneseDefenseType.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.24.2.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.24.2.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Basement.32.961.0\build\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Basement.32.961.0\build\Xamarin.GooglePlayServices.Basement.targets')" />
 </Project>

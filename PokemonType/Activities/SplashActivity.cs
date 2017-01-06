@@ -6,11 +6,13 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Net;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Java.Util;
 
 namespace PokemonType
 {
@@ -25,8 +27,19 @@ namespace PokemonType
 
 			SaveController.Instance.SetContext(this);
 
+			ConnectivityManager cm = (ConnectivityManager)GetSystemService(Context.ConnectivityService);
+			if(cm.ActiveNetworkInfo != null)
+				if (cm.ActiveNetworkInfo.IsConnected)
+					SendData.isConnected = true;
+
 			if (SaveController.GetSaveController().GetSavedLanguage() == "")
-				SaveController.GetSaveController().SetSavedLanguage("English");
+			{
+				if (Locale.Default.GetDisplayLanguage(Locale.Default) == "Japanese")
+					SaveController.GetSaveController().SetSavedLanguage("Japanese");
+				else
+					SaveController.GetSaveController().SetSavedLanguage("English");
+			}
+
 			if (SaveController.GetSaveController().GetSavedLanguage() == "English")
 			{
 				GetTypeLists.GetEnglishLists(Assets);

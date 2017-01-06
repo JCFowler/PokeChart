@@ -11,6 +11,13 @@
     <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Vector.Drawable/24.2.1/embedded</AdditionalAndroidResourcePath>
     <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Animated.Vector.Drawable/24.2.1/embedded</AdditionalAndroidResourcePath>
     <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v7.AppCompat/24.2.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Basement/9.6.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Ads.Lite/9.6.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Gass/9.6.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Tasks/9.6.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Base/9.6.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Clearcut/9.6.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Ads/9.6.1/embedded</AdditionalAndroidResourcePath>
   </AdditionalAndroidResourcePaths>
   <AdditionalJavaLibraryReferences>
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Compat/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
@@ -28,6 +35,13 @@
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Vector.Drawable/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Animated.Vector.Drawable/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.v7.AppCompat/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Basement/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Ads.Lite/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Gass/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Tasks/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Base/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Clearcut/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Ads/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
   </AdditionalJavaLibraryReferences>
   <AdditionalNativeLibraryReferences />
 </Paths>
