@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Dialogs/DialogType.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Dialogs/DialogHelp.cs">
     <Files>
-      <File FileName="PokemonType/Activities/MainActivity.cs" Line="77" Column="35" />
-      <File FileName="PokemonType/Activities/SplashActivity.cs" Line="35" Column="1" />
-      <File FileName="PokemonType/SendData.cs" Line="19" Column="28" />
-      <File FileName="PokemonType/Properties/AndroidManifest.xml" Line="7" Column="177" />
+      <File FileName="PokemonType/Activities/MainActivity.cs" Line="106" Column="4" />
+      <File FileName="PokemonType/AddTypeData.cs" Line="97" Column="53" />
+      <File FileName="PokemonType/Resources/drawable/clickable.xml" Line="1" Column="1" />
+      <File FileName="PokemonType/Resources/values/styles.xml" Line="24" Column="47" />
+      <File FileName="PokemonType/Resources/drawable/testing.xml" Line="5" Column="12" />
       <File FileName="PokemonType/Resources/values/Strings.xml" Line="8" Column="56" />
       <File FileName="PokemonType/Dialogs/DialogHelp.cs" Line="40" Column="5" />
-      <File FileName="PokemonType/Dialogs/DialogType.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />

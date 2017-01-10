@@ -96,7 +96,7 @@ namespace PokemonType
 				else
 					tf.SetTextAppearance(Resource.Style.type_text);
 
-				if (counter[i] > 2 || counter[i] < 0.5)
+				if (counter[i] > 2 || counter[i] < 0.5 && counter[i] != 0)
 				{
 					tf.SetTypeface(null, TypefaceStyle.Bold);
 					tf.Text = "**x" + counter[i].ToString() + " " + list[i];

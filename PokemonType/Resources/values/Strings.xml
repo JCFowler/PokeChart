@@ -4,7 +4,7 @@
 
 	
 	<string name="help_language">Changes Languages (English, Japanese)</string>
-	<string name="help_double_click">Double tap to see Attack Types.</string>
+	<string name="help_double_click">Long press to see Attack Types.</string>
 	<string name="help_help_menu">Show help menu.</string>
 	<string name="dont_show">Don\'t show on start. </string>
 </resources>

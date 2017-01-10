@@ -46,3 +46,5 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Base.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Clearcut.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Ads.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/testing.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/pressed.xml

@@ -114,8 +114,10 @@ namespace PokemonType
 
 		public static void ConvertInsideTypes(SingleType left, SingleType right)
 		{
-			changeInside(left);
-			changeInside(right);
+			if(left.type != null)
+				changeInside(left);
+			if(right.type != null)
+				changeInside(right);
 		}
 
 		private static void changeInside(SingleType mType)

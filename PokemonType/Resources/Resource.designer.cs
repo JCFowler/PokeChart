@@ -1752,8 +1752,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f02006d
 			public const int ic_language = 2130837613;
 			
-			// aapt resource value: 0x7f020071
-			public const int notification_template_icon_bg = 2130837617;
+			// aapt resource value: 0x7f020072
+			public const int notification_template_icon_bg = 2130837618;
 			
 			// aapt resource value: 0x7f02006e
 			public const int splash_logo = 2130837614;
@@ -1762,7 +1762,10 @@ namespace PokemonType
 			public const int splash_screen = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int types = 2130837616;
+			public const int testing = 2130837616;
+			
+			// aapt resource value: 0x7f020071
+			public const int types = 2130837617;
 			
 			static Drawable()
 			{

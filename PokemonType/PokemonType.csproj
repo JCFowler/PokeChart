@@ -28,6 +28,7 @@
     <WarningLevel>4</WarningLevel>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidLinkMode>Full</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -141,6 +142,7 @@
     <AndroidResource Include="Resources\layout\help_layout.axml" />
     <AndroidResource Include="Resources\drawable\ic_help.png" />
     <AndroidResource Include="Resources\drawable\helpButton.xml" />
+    <AndroidResource Include="Resources\drawable\testing.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

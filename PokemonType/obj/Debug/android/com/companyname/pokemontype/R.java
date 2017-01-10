@@ -2039,10 +2039,11 @@ containing a value of this type.
         public static final int helpbutton=0x7f02006b;
         public static final int ic_help=0x7f02006c;
         public static final int ic_language=0x7f02006d;
-        public static final int notification_template_icon_bg=0x7f020071;
+        public static final int notification_template_icon_bg=0x7f020072;
         public static final int splash_logo=0x7f02006e;
         public static final int splash_screen=0x7f02006f;
-        public static final int types=0x7f020070;
+        public static final int testing=0x7f020070;
+        public static final int types=0x7f020071;
     }
     public static final class id {
         public static final int action0=0x7f0c0080;

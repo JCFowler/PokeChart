@@ -10,10 +10,12 @@ using System.Linq;
 using Android.Support.V7.App;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Gms.Ads;
+using Android.Content.PM;
+using Android.Gestures;
 
 namespace PokemonType
 {
-	[Activity(Theme ="@style/MyTheme")]
+	[Activity(Theme ="@style/MyTheme", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainActivity : AppCompatActivity
 	{
 		DateTime clickedTime;
@@ -89,6 +91,8 @@ namespace PokemonType
 				textViews[i].SetPadding(0, 0, 0, 10);
 
 				int h = Resources.DisplayMetrics.HeightPixels / 100;
+				if (h > 20)
+					h = 20;
 
 				textViews[i].SetTextSize(Android.Util.ComplexUnitType.Dip, h + 11);
 
@@ -96,6 +100,8 @@ namespace PokemonType
 				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[types[i].type]));
 
 				textViews[i].Click += Handle_Click;
+				textViews[i].LongClick += Handle_LongClick;
+				//textViews[i].Touch += Handle_Touch;
 			}
 
 			if (SendData.showHelp)
@@ -123,14 +129,44 @@ namespace PokemonType
 			}
 			else
 				mainLayout.RemoveView(adLayout);
+
+
+		}
+
+		void Handle_Touch(object sender, View.TouchEventArgs e)
+		{
+			var handled = false;
+			int num = (int)((TextView)sender).Tag;
+			TimeSpan timespan = DateTime.Now - clickedTime;
+			gradient = (GradientDrawable)textViews[num].Background;
+
+			if (timespan.Milliseconds > 200)
+			{
+				Toast.MakeText(this, "Long CLick", ToastLength.Short).Show();
+				handled = true;
+			}
+			else if (e.Event.Action == MotionEventActions.Down)
+			{
+				gradient.SetColor(Color.Firebrick);
+				Toast.MakeText(this, "DOwn", ToastLength.Short).Show();
+				handled = false;
+			}
+			else if (e.Event.Action == MotionEventActions.Up)
+			{
+				gradient.SetColor(Color.ParseColor(Colors.TypeToColor[textViews[num].Text]));
+				Toast.MakeText(this, "Up", ToastLength.Short).Show();
+				handled = true;
+			}
+
+			e.Handled = handled;
 		}
 
 		void Handle_Click(object sender, EventArgs e)
 		{
 			int num = (int)((TextView)sender).Tag;
 
-			if (!GetTimeSpan(textViews[num], num))
-			{
+			//if (!GetTimeSpan(textViews[num], num))
+			//{
 				gradient = (GradientDrawable)textViews[num].Background;
 
 				removeChilren(layout1);
@@ -213,7 +249,23 @@ namespace PokemonType
 				AddTypeData.PopulateTF(weakness, layout1, 2, this);
 				AddTypeData.PopulateTF(resistance, layout2, .5, this);
 				AddTypeData.PopulateTF(immune, layout3, 0, this);
-			}
+			//}
+		}
+
+		void Handle_LongClick(object sender, View.LongClickEventArgs e)
+		{
+			int num = (int)((TextView)sender).Tag;
+
+			var sendTypes = allTypes.attackTypes;
+
+			if (SendData.sendAttackType.Count > 0)
+				SendData.sendAttackType[0] = sendTypes[num];
+			else
+				SendData.sendAttackType.Add(sendTypes[num]);
+
+			FragmentTransaction transaction = FragmentManager.BeginTransaction();
+			DialogType dialog = new DialogType(this);
+			dialog.Show(transaction, "Attack Type");
 		}
 
 		public void removeChilren(LinearLayout layout)
@@ -233,33 +285,33 @@ namespace PokemonType
 			side.num = -1;
 		}
 
-		public bool GetTimeSpan(TextView TF, int num)
-		{
-			if (clickedView != null)
-			{
-				if (clickedView == TF)
-				{
-					TimeSpan timespan = DateTime.Now - clickedTime;
-					if (timespan.Milliseconds < 200)
-					{
-						var sendTypes = allTypes.attackTypes;
+		//public bool GetTimeSpan(TextView TF, int num)
+		//{
+		//	if (clickedView != null)
+		//	{
+		//		if (clickedView == TF)
+		//		{
+		//			TimeSpan timespan = DateTime.Now - clickedTime;
+		//			if (timespan.Milliseconds < 200)
+		//			{
+		//				var sendTypes = allTypes.attackTypes;
 
-						if (SendData.sendAttackType.Count > 0)
-							SendData.sendAttackType[0] = sendTypes[num];
-						else
-							SendData.sendAttackType.Add(sendTypes[num]);
+		//				if (SendData.sendAttackType.Count > 0)
+		//					SendData.sendAttackType[0] = sendTypes[num];
+		//				else
+		//					SendData.sendAttackType.Add(sendTypes[num]);
 
-						FragmentTransaction transaction = FragmentManager.BeginTransaction();
-						DialogType dialog = new DialogType(this);
-						dialog.Show(transaction, "Attack Type");
-						return true;
-					}
-				}
-			}
-			clickedView = TF;
-			clickedTime = DateTime.Now;
-			return false;
-		}
+		//				FragmentTransaction transaction = FragmentManager.BeginTransaction();
+		//				DialogType dialog = new DialogType(this);
+		//				dialog.Show(transaction, "Attack Type");
+		//				return true;
+		//			}
+		//		}
+		//	}
+		//	clickedView = TF;
+		//	clickedTime = DateTime.Now;
+		//	return false;
+		//}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
