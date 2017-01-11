@@ -26,14 +26,14 @@ Android.Support.V4.Widget.DrawerLayout/IDrawerListenerImplementor, Xamarin.Andro
 Android.Support.V4.Widget.DrawerLayout+IDrawerListenerImplementor, Xamarin.Android.Support.Core.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.widget.DrawerLayout_DrawerListenerImplementor
 Android.Support.V4.Widget.DrawerLayout.IDrawerListenerImplementor;mono.android.support.v4.widget.DrawerLayout_DrawerListenerImplementor
 mono.android.support.v4.widget.DrawerLayout_DrawerListenerImplementor;mono.android.support.v4.widget.DrawerLayout_DrawerListenerImplementor
-Android.Support.V4.Media.Session.MediaSessionCompat/IOnActiveChangeListenerImplementor, Xamarin.Android.Support.Media.Compat;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
-Android.Support.V4.Media.Session.MediaSessionCompat+IOnActiveChangeListenerImplementor, Xamarin.Android.Support.Media.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
-Android.Support.V4.Media.Session.MediaSessionCompat.IOnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
-mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
 Android.Support.V4.App.FragmentManager/IOnBackStackChangedListenerImplementor, Xamarin.Android.Support.Fragment;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
 Android.Support.V4.App.FragmentManager+IOnBackStackChangedListenerImplementor, Xamarin.Android.Support.Fragment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
 Android.Support.V4.App.FragmentManager.IOnBackStackChangedListenerImplementor;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
 mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor;mono.android.support.v4.app.FragmentManager_OnBackStackChangedListenerImplementor
+Android.Support.V4.Media.Session.MediaSessionCompat/IOnActiveChangeListenerImplementor, Xamarin.Android.Support.Media.Compat;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
+Android.Support.V4.Media.Session.MediaSessionCompat+IOnActiveChangeListenerImplementor, Xamarin.Android.Support.Media.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
+Android.Support.V4.Media.Session.MediaSessionCompat.IOnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
+mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor;mono.android.support.v4.media.session.MediaSessionCompat_OnActiveChangeListenerImplementor
 Android.Support.V7.App.ActionBar/IOnMenuVisibilityListenerImplementor, Xamarin.Android.Support.v7.AppCompat;mono.android.support.v7.app.ActionBar_OnMenuVisibilityListenerImplementor
 Android.Support.V7.App.ActionBar+IOnMenuVisibilityListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v7.app.ActionBar_OnMenuVisibilityListenerImplementor
 Android.Support.V7.App.ActionBar.IOnMenuVisibilityListenerImplementor;mono.android.support.v7.app.ActionBar_OnMenuVisibilityListenerImplementor

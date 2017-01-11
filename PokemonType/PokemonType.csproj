@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PokemonType</RootNamespace>
     <AssemblyName>PokemonType</AssemblyName>
-    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -143,6 +143,12 @@
     <AndroidResource Include="Resources\drawable\ic_help.png" />
     <AndroidResource Include="Resources\drawable\helpButton.xml" />
     <AndroidResource Include="Resources\drawable\testing.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
