@@ -1,21 +1,18 @@
 ﻿<Properties StartupConfiguration="{7DD2F1A2-8540-49B8-B24F-A1A17F3F9FF0}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PokemonType/Activities/MainActivity.cs">
     <Files>
-      <File FileName="PokemonType\Activities\MainActivity.cs" Line="106" Column="4" />
-      <File FileName="PokemonType\AddTypeData.cs" Line="97" Column="53" />
-      <File FileName="PokemonType\Resources\drawable\clickable.xml" Line="1" Column="1" />
-      <File FileName="PokemonType\Resources\values\styles.xml" Line="55" Column="1" />
-      <File FileName="PokemonType\Resources\drawable\testing.xml" Line="5" Column="12" />
-      <File FileName="PokemonType\Resources\values\Strings.xml" Line="3" Column="27" />
-      <File FileName="PokemonType\Dialogs\DialogHelp.cs" Line="41" Column="4" />
-      <File FileName="PokemonType\Activities\SplashActivity.cs" Line="1" Column="1" />
-      <File FileName="PokemonType\Resources\drawable\splash_screen.xml" Line="2" Column="70" />
+      <File FileName="PokemonType/Activities/MainActivity.cs" Line="32" Column="24" />
+      <File FileName="PokemonType/Properties/AndroidManifest.xml" Line="11" Column="12" />
+      <File FileName="PokemonType/Properties/AssemblyInfo.cs" Line="16" Column="1" />
+      <File FileName="../../../../../Library/Frameworks/Xamarin.Android.framework/Versions/7.0.2-42/lib/xbuild/Xamarin/Android/Xamarin.Android.Common.targets" Line="252" Column="13" />
+      <File FileName="PokemonType/AddTypeData.cs" Line="95" Column="9" />
+      <File FileName="PokemonType/Resources/values/Strings.xml" Line="3" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.PokemonType AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.0088a5532eb42bd0" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

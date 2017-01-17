@@ -1,1 +1,1 @@
-<resources><string name="hello">Text</string><string name="app_name">PokemonType</string></resources>
+<resources><string name="app_name">PokeChart</string><string name="help_language">Changes Languages (English, Japanese)</string><string name="help_double_click">Long press to see Attack Types.</string><string name="help_help_menu">Show help menu.</string><string name="dont_show">Don\'t show on start. </string></resources>

@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PokemonType</RootNamespace>
     <AssemblyName>PokemonType</AssemblyName>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -17,6 +17,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>Full</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,7 +29,6 @@
     <WarningLevel>4</WarningLevel>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
-    <AndroidLinkMode>Full</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -133,16 +133,9 @@
     <AndroidResource Include="Resources\drawable\buttonSelector.xml" />
     <AndroidResource Include="Resources\layout\dialog_layout.axml" />
     <AndroidResource Include="Resources\drawable\splash_screen.xml" />
-    <AndroidResource Include="Resources\drawable\splash_logo.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\pokeball.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\pokeball.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\pokeball.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\pokeball.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\pokeball.png" />
     <AndroidResource Include="Resources\layout\help_layout.axml" />
     <AndroidResource Include="Resources\drawable\ic_help.png" />
     <AndroidResource Include="Resources\drawable\helpButton.xml" />
-    <AndroidResource Include="Resources\drawable\testing.xml" />
     <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
