@@ -3,6 +3,7 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Xml.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Core.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Mono.Android.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Json.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Java.Interop.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Newtonsoft.Json.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Xamarin.Android.Support.Compat.dll
@@ -23,7 +24,10 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Xamarin.GooglePlayServices.Clearcut.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Xamarin.GooglePlayServices.Ads.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/mscorlib.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Net.Http.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Runtime.Serialization.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.ServiceModel.Internals.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.ComponentModel.Composition.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Xml.Linq.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Microsoft.CSharp.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Mono.CSharp.dll

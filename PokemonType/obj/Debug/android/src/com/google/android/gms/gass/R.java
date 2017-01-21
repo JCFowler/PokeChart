@@ -2039,12 +2039,10 @@ containing a value of this type.
         public static int helpbutton=0x7f02006b;
         public static int ic_help=0x7f02006c;
         public static int ic_language=0x7f02006d;
-        public static int notification_template_icon_bg=0x7f020073;
+        public static int notification_template_icon_bg=0x7f020071;
         public static int splash=0x7f02006e;
-        public static int splash_logo=0x7f02006f;
-        public static int splash_screen=0x7f020070;
-        public static int testing=0x7f020071;
-        public static int types=0x7f020072;
+        public static int splash_screen=0x7f02006f;
+        public static int types=0x7f020070;
     }
     public static final class id {
         public static int action0=0x7f0c0080;
@@ -2247,7 +2245,6 @@ containing a value of this type.
     }
     public static final class mipmap {
         public static int icon=0x7f030000;
-        public static int pokeball=0x7f030001;
     }
     public static final class string {
         public static int abc_action_bar_home_description=0x7f06001e;

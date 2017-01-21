@@ -27,8 +27,9 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
+    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -114,6 +115,9 @@
     <Compile Include="Activities\SplashActivity.cs" />
     <Compile Include="Dialogs\DialogType.cs" />
     <Compile Include="Dialogs\DialogHelp.cs" />
+    <Compile Include="Activities\StartActivity.cs" />
+    <Compile Include="Fragments\SingleTypeFragment.cs" />
+    <Compile Include="MyActionBarDrawerToggle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -142,6 +146,8 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\layout\main_layout.axml" />
+    <AndroidResource Include="Resources\layout\single_type_layout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
@@ -149,6 +155,7 @@
     <Folder Include="values-v21\" />
     <Folder Include="Resources\Menu\" />
     <Folder Include="Dialogs\" />
+    <Folder Include="Fragments\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\AttackTypeChart.txt" />

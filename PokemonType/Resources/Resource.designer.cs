@@ -1777,8 +1777,8 @@ namespace PokemonType
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c0080
-			public const int action0 = 2131492992;
+			// aapt resource value: 0x7f0c0083
+			public const int action0 = 2131492995;
 			
 			// aapt resource value: 0x7f0c004e
 			public const int action_bar = 2131492942;
@@ -1804,14 +1804,14 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c004f
 			public const int action_context_bar = 2131492943;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int action_divider = 2131492996;
+			// aapt resource value: 0x7f0c0087
+			public const int action_divider = 2131492999;
 			
-			// aapt resource value: 0x7f0c008e
-			public const int action_help = 2131493006;
+			// aapt resource value: 0x7f0c0091
+			public const int action_help = 2131493009;
 			
-			// aapt resource value: 0x7f0c008d
-			public const int action_language = 2131493005;
+			// aapt resource value: 0x7f0c0090
+			public const int action_language = 2131493008;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1864,8 +1864,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c0037
 			public const int buttonPanel = 2131492919;
 			
-			// aapt resource value: 0x7f0c0081
-			public const int cancel_action = 2131492993;
+			// aapt resource value: 0x7f0c0084
+			public const int cancel_action = 2131492996;
 			
 			// aapt resource value: 0x7f0c0069
 			public const int checkBox1 = 2131492969;
@@ -1873,8 +1873,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c0045
 			public const int checkbox = 2131492933;
 			
-			// aapt resource value: 0x7f0c0087
-			public const int chronometer = 2131492999;
+			// aapt resource value: 0x7f0c008a
+			public const int chronometer = 2131493002;
 			
 			// aapt resource value: 0x7f0c0027
 			public const int collapseActionView = 2131492903;
@@ -1900,20 +1900,29 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c0016
 			public const int disableHome = 2131492886;
 			
+			// aapt resource value: 0x7f0c0080
+			public const int drawer_layout = 2131492992;
+			
+			// aapt resource value: 0x7f0c0082
+			public const int drawer_list = 2131492994;
+			
 			// aapt resource value: 0x7f0c0050
 			public const int edit_query = 2131492944;
 			
 			// aapt resource value: 0x7f0c0024
 			public const int end = 2131492900;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int end_padder = 2131493004;
+			// aapt resource value: 0x7f0c008f
+			public const int end_padder = 2131493007;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int expand_activities_button = 2131492913;
 			
 			// aapt resource value: 0x7f0c0044
 			public const int expanded_menu = 2131492932;
+			
+			// aapt resource value: 0x7f0c0081
+			public const int fragmentContainer = 2131492993;
 			
 			// aapt resource value: 0x7f0c007f
 			public const int googleAds = 2131492991;
@@ -1936,8 +1945,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c0032
 			public const int image = 2131492914;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int info = 2131493003;
+			// aapt resource value: 0x7f0c008e
+			public const int info = 2131493006;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int item_touch_helper_previous_elevation = 2131492873;
@@ -1960,11 +1969,11 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c000f
 			public const int light = 2131492879;
 			
-			// aapt resource value: 0x7f0c0085
-			public const int line1 = 2131492997;
+			// aapt resource value: 0x7f0c0088
+			public const int line1 = 2131493000;
 			
-			// aapt resource value: 0x7f0c0089
-			public const int line3 = 2131493001;
+			// aapt resource value: 0x7f0c008c
+			public const int line3 = 2131493004;
 			
 			// aapt resource value: 0x7f0c0013
 			public const int listMode = 2131492883;
@@ -1975,8 +1984,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c005d
 			public const int mainLayout = 2131492957;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int media_actions = 2131492995;
+			// aapt resource value: 0x7f0c0086
+			public const int media_actions = 2131492998;
 			
 			// aapt resource value: 0x7f0c0025
 			public const int middle = 2131492901;
@@ -2089,8 +2098,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c000b
 			public const int standard = 2131492875;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int status_bar_latest_event_content = 2131492994;
+			// aapt resource value: 0x7f0c0085
+			public const int status_bar_latest_event_content = 2131492997;
 			
 			// aapt resource value: 0x7f0c0048
 			public const int submenuarrow = 2131492936;
@@ -2101,11 +2110,11 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c0015
 			public const int tabMode = 2131492885;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int text = 2131493002;
+			// aapt resource value: 0x7f0c008d
+			public const int text = 2131493005;
 			
-			// aapt resource value: 0x7f0c0088
-			public const int text2 = 2131493000;
+			// aapt resource value: 0x7f0c008b
+			public const int text2 = 2131493003;
 			
 			// aapt resource value: 0x7f0c0040
 			public const int textSpacerNoButtons = 2131492928;
@@ -2173,8 +2182,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0c0067
 			public const int text_language = 2131492967;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int time = 2131492998;
+			// aapt resource value: 0x7f0c0089
+			public const int time = 2131493001;
 			
 			// aapt resource value: 0x7f0c0036
 			public const int title = 2131492918;
@@ -2335,43 +2344,49 @@ namespace PokemonType
 			public const int Main = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int notification_media_action = 2130968605;
+			public const int main_layout = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int notification_media_cancel_action = 2130968606;
+			public const int notification_media_action = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int notification_template_big_media = 2130968607;
+			public const int notification_media_cancel_action = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int notification_template_big_media_narrow = 2130968608;
+			public const int notification_template_big_media = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int notification_template_lines = 2130968609;
+			public const int notification_template_big_media_narrow = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int notification_template_media = 2130968610;
+			public const int notification_template_lines = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int notification_template_part_chronometer = 2130968611;
+			public const int notification_template_media = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int notification_template_part_time = 2130968612;
+			public const int notification_template_part_chronometer = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int select_dialog_item_material = 2130968613;
+			public const int notification_template_part_time = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int select_dialog_multichoice_material = 2130968614;
+			public const int select_dialog_item_material = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int select_dialog_singlechoice_material = 2130968615;
+			public const int select_dialog_multichoice_material = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int support_simple_spinner_dropdown_item = 2130968616;
+			public const int select_dialog_singlechoice_material = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int toolbar = 2130968617;
+			public const int single_type_layout = 2130968617;
+			
+			// aapt resource value: 0x7f04002a
+			public const int support_simple_spinner_dropdown_item = 2130968618;
+			
+			// aapt resource value: 0x7f04002b
+			public const int toolbar = 2130968619;
 			
 			static Layout()
 			{

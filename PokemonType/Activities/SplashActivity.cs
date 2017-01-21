@@ -57,7 +57,7 @@ namespace PokemonType
 			else
 				SendData.showHelp = false;
 
-			StartActivity(new Intent(Application.Context, typeof(MainActivity)));
+			StartActivity(new Intent(Application.Context, typeof(StartActivity)));
 		}
 	}
 }

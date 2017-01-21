@@ -124,34 +124,6 @@ namespace PokemonType
 				mainLayout.RemoveView(adLayout);
 		}
 
-		//void Handle_Touch(object sender, View.TouchEventArgs e)
-		//{
-		//	var handled = false;
-		//	int num = (int)((TextView)sender).Tag;
-		//	TimeSpan timespan = DateTime.Now - clickedTime;
-		//	gradient = (GradientDrawable)textViews[num].Background;
-
-		//	if (timespan.Milliseconds > 200)
-		//	{
-		//		Toast.MakeText(this, "Long CLick", ToastLength.Short).Show();
-		//		handled = true;
-		//	}
-		//	else if (e.Event.Action == MotionEventActions.Down)
-		//	{
-		//		gradient.SetColor(Color.Firebrick);
-		//		Toast.MakeText(this, "DOwn", ToastLength.Short).Show();
-		//		handled = false;
-		//	}
-		//	else if (e.Event.Action == MotionEventActions.Up)
-		//	{
-		//		gradient.SetColor(Color.ParseColor(Colors.TypeToColor[textViews[num].Text]));
-		//		Toast.MakeText(this, "Up", ToastLength.Short).Show();
-		//		handled = true;
-		//	}
-
-		//	e.Handled = handled;
-		//}
-
 		void Handle_Click(object sender, EventArgs e)
 		{
 			int num = (int)((TextView)sender).Tag;
