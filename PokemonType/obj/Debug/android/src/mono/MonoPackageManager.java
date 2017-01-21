@@ -117,6 +117,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.GooglePlayServices.Base.dll",
 		"Xamarin.GooglePlayServices.Clearcut.dll",
 		"Xamarin.GooglePlayServices.Ads.dll",
+		"Xamarin.Android.Support.Design.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

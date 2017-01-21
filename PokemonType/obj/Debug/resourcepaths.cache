@@ -18,6 +18,7 @@
     <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Base/9.6.1/embedded</AdditionalAndroidResourcePath>
     <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Clearcut/9.6.1/embedded</AdditionalAndroidResourcePath>
     <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Ads/9.6.1/embedded</AdditionalAndroidResourcePath>
+    <AdditionalAndroidResourcePath>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Design/24.2.1/embedded</AdditionalAndroidResourcePath>
   </AdditionalAndroidResourcePaths>
   <AdditionalJavaLibraryReferences>
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Compat/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
@@ -42,6 +43,7 @@
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Base/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Clearcut/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
     <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.GooglePlayServices.Ads/9.6.1/embedded/classes.jar</AdditionalJavaLibraryReference>
+    <AdditionalJavaLibraryReference>/Users/johnfowler/.local/share/Xamarin/Xamarin.Android.Support.Design/24.2.1/embedded/classes.jar</AdditionalJavaLibraryReference>
   </AdditionalJavaLibraryReferences>
   <AdditionalNativeLibraryReferences />
 </Paths>

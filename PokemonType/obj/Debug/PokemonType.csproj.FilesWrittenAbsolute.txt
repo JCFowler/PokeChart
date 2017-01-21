@@ -7,7 +7,7 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/values/strings.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/values/styles.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/clickable.xml
-/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/toolbar.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/toolbar_layout.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/ic_language.png
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/menu/action_toolbar.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/types.xml
@@ -23,6 +23,15 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xxhdpi/icon.png
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xxxhdpi/icon.png
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/splash.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/main_layout.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/single_type_layout.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/nav_header.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/menu/drawer_view.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-mdpi/ic_menu.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xhdpi/ic_menu.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xxhdpi/ic_menu.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-xxxhdpi/ic_menu.png
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/drawable/ic_menu.png
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/R.cs.flag
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/com.krasez.pokechart-Signed.apk
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/uploadflags.txt
@@ -46,5 +55,4 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Base.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Clearcut.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Ads.dll
-/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/main_layout.xml
-/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/single_type_layout.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Design.dll

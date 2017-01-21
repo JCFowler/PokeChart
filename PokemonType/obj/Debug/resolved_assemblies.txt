@@ -23,6 +23,7 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Xamarin.GooglePlayServices.Base.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Xamarin.GooglePlayServices.Clearcut.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Xamarin.GooglePlayServices.Ads.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/Xamarin.Android.Support.Design.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/mscorlib.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Net.Http.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/android/assets/System.Runtime.Serialization.dll

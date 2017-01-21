@@ -100,6 +100,9 @@
     <Reference Include="Xamarin.GooglePlayServices.Ads">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Ads.32.961.0\lib\MonoAndroid70\Xamarin.GooglePlayServices.Ads.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.24.2.1\lib\MonoAndroid70\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -117,7 +120,6 @@
     <Compile Include="Dialogs\DialogHelp.cs" />
     <Compile Include="Activities\StartActivity.cs" />
     <Compile Include="Fragments\SingleTypeFragment.cs" />
-    <Compile Include="MyActionBarDrawerToggle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -130,7 +132,7 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable\clickable.xml" />
-    <AndroidResource Include="Resources\layout\toolbar.axml" />
+    <AndroidResource Include="Resources\layout\toolbar_layout.axml" />
     <AndroidResource Include="Resources\drawable\ic_language.png" />
     <AndroidResource Include="Resources\Menu\action_toolbar.xml" />
     <AndroidResource Include="Resources\drawable\types.xml" />
@@ -148,6 +150,13 @@
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\layout\main_layout.axml" />
     <AndroidResource Include="Resources\layout\single_type_layout.axml" />
+    <AndroidResource Include="Resources\layout\nav_header.axml" />
+    <AndroidResource Include="Resources\Menu\drawer_view.axml" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

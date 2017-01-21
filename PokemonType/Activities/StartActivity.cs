@@ -9,18 +9,20 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
+using SupportActionBar = Android.Support.V7.App.ActionBar;
 
 namespace PokemonType
 {
 	[Activity(Theme = "@style/MyTheme", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class StartActivity : AppCompatActivity
 	{
-		MyActionBarDrawerToggle mDrawerToggle;
+		DrawerLayout mDrawerLayout;
 		ArrayAdapter mLeftAdapter;
 		List<String> mDataSet;
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -28,21 +30,22 @@ namespace PokemonType
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.main_layout);
 
-			var toolbar = FindViewById<SupportToolbar>(Resource.Id.toolbar);
-			SetSupportActionBar(toolbar);
-
-			var mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-			var mDrawer = FindViewById<ListView>(Resource.Id.drawer_list);
+			mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+			var navView = FindViewById<NavigationView>(Resource.Id.nav_view);
+			SupportToolbar toolbar = this.FindViewById<SupportToolbar>(Resource.Id.toolbar);
 
 			var trans = SupportFragmentManager.BeginTransaction();
 			trans.Add(Resource.Id.fragmentContainer, new SingleTypeFragment(this));
 			trans.Commit();
 
-			mDrawerToggle = new MyActionBarDrawerToggle(this, mDrawerLayout, 0, 1);
-
-			mDataSet = new List<string> { "Single Type", "Team Type"};
-			mLeftAdapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, mDataSet);
-			mDrawer.Adapter = mLeftAdapter;
+			if (navView != null)
+			{
+				navView.NavigationItemSelected += (sender, e) =>
+				{
+					e.MenuItem.SetChecked(true);
+					mDrawerLayout.CloseDrawers();
+				};
+			}
 
 			if (SendData.showHelp)
 			{
@@ -51,11 +54,13 @@ namespace PokemonType
 				dialog.Show(transaction, "Help");
 			}
 
-			mDrawerLayout.AddDrawerListener(mDrawerToggle);
-			mDrawerToggle.SyncState();		
 
-			SupportActionBar.SetHomeButtonEnabled(true);
-			SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+			SetSupportActionBar(toolbar);
+			SupportActionBar ab = SupportActionBar;
+			//SupportActionBar.SetHomeButtonEnabled(true);
+			ab.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
+			ab.SetDisplayHomeAsUpEnabled(true);
+			//SupportActionBar.SetHomeButtonEnabled(true);
 		}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
@@ -68,7 +73,7 @@ namespace PokemonType
 			switch (item.ItemId)
 			{
 				case Android.Resource.Id.Home:
-					mDrawerToggle.OnOptionsItemSelected(item);
+					mDrawerLayout.OpenDrawer((int)GravityFlags.Left);
 					break;
 				case Resource.Id.action_language:
 					SendData.isJapanese = !SendData.isJapanese;

@@ -22,10 +22,6 @@ PokemonType.SingleTypeFragment, PokemonType;md582b91813162591e19c8e1a468a917724.
 PokemonType.SingleTypeFragment, PokemonType, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md582b91813162591e19c8e1a468a917724.SingleTypeFragment
 PokemonType.SingleTypeFragment;md582b91813162591e19c8e1a468a917724.SingleTypeFragment
 pokemontype.SingleTypeFragment;md582b91813162591e19c8e1a468a917724.SingleTypeFragment
-PokemonType.MyActionBarDrawerToggle, PokemonType;md582b91813162591e19c8e1a468a917724.MyActionBarDrawerToggle
-PokemonType.MyActionBarDrawerToggle, PokemonType, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md582b91813162591e19c8e1a468a917724.MyActionBarDrawerToggle
-PokemonType.MyActionBarDrawerToggle;md582b91813162591e19c8e1a468a917724.MyActionBarDrawerToggle
-pokemontype.MyActionBarDrawerToggle;md582b91813162591e19c8e1a468a917724.MyActionBarDrawerToggle
 Android.Support.V4.View.ActionProvider/ISubUiVisibilityListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
 Android.Support.V4.View.ActionProvider+ISubUiVisibilityListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
 Android.Support.V4.View.ActionProvider.ISubUiVisibilityListenerImplementor;mono.android.support.v4.view.ActionProvider_SubUiVisibilityListenerImplementor
@@ -58,3 +54,7 @@ Android.Gms.Ads.Purchase.IInAppPurchaseListenerImplementor, Xamarin.GooglePlaySe
 Android.Gms.Ads.Purchase.IInAppPurchaseListenerImplementor, Xamarin.GooglePlayServices.Ads.Lite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.ads.purchase.InAppPurchaseListenerImplementor
 Android.Gms.Ads.Purchase.IInAppPurchaseListenerImplementor;mono.com.google.android.gms.ads.purchase.InAppPurchaseListenerImplementor
 mono.com.google.android.gms.ads.purchase.InAppPurchaseListenerImplementor;mono.com.google.android.gms.ads.purchase.InAppPurchaseListenerImplementor
+Android.Support.Design.Widget.NavigationView/IOnNavigationItemSelectedListenerImplementor, Xamarin.Android.Support.Design;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
+Android.Support.Design.Widget.NavigationView+IOnNavigationItemSelectedListenerImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
+Android.Support.Design.Widget.NavigationView.IOnNavigationItemSelectedListenerImplementor;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
+mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor;mono.android.support.design.widget.NavigationView_OnNavigationItemSelectedListenerImplementor
