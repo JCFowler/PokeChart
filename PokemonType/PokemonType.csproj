@@ -120,6 +120,8 @@
     <Compile Include="Dialogs\DialogHelp.cs" />
     <Compile Include="Activities\StartActivity.cs" />
     <Compile Include="Fragments\SingleTypeFragment.cs" />
+    <Compile Include="Fragments\TeamTypeFragment.cs" />
+    <Compile Include="Dialogs\DialogSelectType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -157,6 +159,8 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_menu.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_menu.png" />
     <AndroidResource Include="Resources\drawable\ic_menu.png" />
+    <AndroidResource Include="Resources\layout\team_type_layout.axml" />
+    <AndroidResource Include="Resources\layout\select_type_layout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

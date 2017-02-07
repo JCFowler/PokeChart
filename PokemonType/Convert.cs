@@ -61,7 +61,9 @@ namespace PokemonType
 			{ "防衛", "Defense"},
 			{ "Defense", "防衛"},
 			{ "攻撃", "Attack"},
-			{ "Attack", "攻撃"}
+			{ "Attack", "攻撃"},
+			{ "Team", "チーム"},
+			{ "チーム", "Team"}
 		};
 
 		public static void ConvertTextViews(List<LinearLayout> sentLayouts)

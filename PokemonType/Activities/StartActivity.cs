@@ -40,11 +40,7 @@ namespace PokemonType
 
 			if (navView != null)
 			{
-				navView.NavigationItemSelected += (sender, e) =>
-				{
-					e.MenuItem.SetChecked(true);
-					mDrawerLayout.CloseDrawers();
-				};
+				navView.NavigationItemSelected += NavView_NavigationItemSelected;
 			}
 
 			if (SendData.showHelp)
@@ -54,18 +50,58 @@ namespace PokemonType
 				dialog.Show(transaction, "Help");
 			}
 
-
 			SetSupportActionBar(toolbar);
 			SupportActionBar ab = SupportActionBar;
-			//SupportActionBar.SetHomeButtonEnabled(true);
 			ab.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
 			ab.SetDisplayHomeAsUpEnabled(true);
-			//SupportActionBar.SetHomeButtonEnabled(true);
+		}
+
+		void NavView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
+		{
+			var trans = SupportFragmentManager.BeginTransaction();
+			switch (e.MenuItem.ToString())
+			{
+				case "Single Type":
+					e.MenuItem.SetChecked(true);
+					trans.Replace(Resource.Id.fragmentContainer, new SingleTypeFragment(this));
+					trans.Commit();
+					break;
+				case "Team Type":
+					e.MenuItem.SetChecked(true);
+					trans.Replace(Resource.Id.fragmentContainer, new TeamTypeFragment(this));
+					trans.Commit();
+					break;
+				case "Change Language":
+					SendData.isJapanese = !SendData.isJapanese;
+					Title = Convert.LanguageDic[Title];
+
+					if (SendData.isJapanese)
+					{
+						GetTypeLists.GetJapaneseLists(Assets);
+						SaveController.GetSaveController().SetSavedLanguage("Japanese");
+					}
+					else
+					{
+						GetTypeLists.GetEnglishLists(Assets);
+						SaveController.GetSaveController().SetSavedLanguage("English");
+					}
+
+					//types = allTypes.defenseTypes;
+					//Convert.ConvertInsideTypes(leftSide, rightSide);
+					//Convert.ConvertTextViews(layouts);
+					break;
+				case "Help":
+					FragmentTransaction transaction = FragmentManager.BeginTransaction();
+					DialogHelp dialog = new DialogHelp();
+					dialog.Show(transaction, "Help");
+					break;
+			}
+			mDrawerLayout.CloseDrawers();
 		}
 
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
-			MenuInflater.Inflate(Resource.Menu.action_toolbar, menu);
+			//MenuInflater.Inflate(Resource.Menu.action_toolbar, menu);
 			return base.OnCreateOptionsMenu(menu);
 		}
 		public override bool OnOptionsItemSelected(IMenuItem item)
@@ -110,6 +146,13 @@ namespace PokemonType
 			FragmentTransaction transaction = FragmentManager.BeginTransaction();
 			DialogType dialog = new DialogType(this);
 			dialog.Show(transaction, "Attack Type");
+		}
+
+		public void ShowSelectType()
+		{
+			FragmentTransaction transaction = FragmentManager.BeginTransaction();
+			DialogSelectType dialog = new DialogSelectType(this);
+			dialog.Show(transaction, "Select Type");
 		}
 	}
 }

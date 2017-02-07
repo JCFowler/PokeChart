@@ -2230,11 +2230,11 @@ namespace PokemonType
 			// aapt resource value: 0x7f0a00a6
 			public const int action_divider = 2131361958;
 			
-			// aapt resource value: 0x7f0a00b3
-			public const int action_help = 2131361971;
+			// aapt resource value: 0x7f0a00b6
+			public const int action_help = 2131361974;
 			
-			// aapt resource value: 0x7f0a00b2
-			public const int action_language = 2131361970;
+			// aapt resource value: 0x7f0a00b5
+			public const int action_language = 2131361973;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -2272,8 +2272,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0a003f
 			public const int always = 2131361855;
 			
-			// aapt resource value: 0x7f0a00af
-			public const int appBar = 2131361967;
+			// aapt resource value: 0x7f0a00b2
+			public const int appBar = 2131361970;
 			
 			// aapt resource value: 0x7f0a007f
 			public const int attackText = 2131361919;
@@ -2289,6 +2289,9 @@ namespace PokemonType
 			
 			// aapt resource value: 0x7f0a008b
 			public const int btnOk = 2131361931;
+			
+			// aapt resource value: 0x7f0a00b1
+			public const int button1 = 2131361969;
 			
 			// aapt resource value: 0x7f0a004e
 			public const int buttonPanel = 2131361870;
@@ -2398,8 +2401,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0a0025
 			public const int @fixed = 2131361829;
 			
-			// aapt resource value: 0x7f0a00b1
-			public const int fragmentContainer = 2131361969;
+			// aapt resource value: 0x7f0a00b4
+			public const int fragmentContainer = 2131361972;
 			
 			// aapt resource value: 0x7f0a009f
 			public const int googleAds = 2131361951;
@@ -2479,17 +2482,17 @@ namespace PokemonType
 			// aapt resource value: 0x7f0a0027
 			public const int multiply = 2131361831;
 			
+			// aapt resource value: 0x7f0a00ba
+			public const int nav_help = 2131361978;
+			
+			// aapt resource value: 0x7f0a00b9
+			public const int nav_language = 2131361977;
+			
 			// aapt resource value: 0x7f0a00b7
-			public const int nav_help = 2131361975;
+			public const int nav_single = 2131361975;
 			
-			// aapt resource value: 0x7f0a00b6
-			public const int nav_language = 2131361974;
-			
-			// aapt resource value: 0x7f0a00b4
-			public const int nav_single = 2131361972;
-			
-			// aapt resource value: 0x7f0a00b5
-			public const int nav_team = 2131361973;
+			// aapt resource value: 0x7f0a00b8
+			public const int nav_team = 2131361976;
 			
 			// aapt resource value: 0x7f0a00a1
 			public const int nav_view = 2131361953;
@@ -2677,8 +2680,14 @@ namespace PokemonType
 			// aapt resource value: 0x7f0a009e
 			public const int textView18 = 2131361950;
 			
+			// aapt resource value: 0x7f0a00af
+			public const int textView19 = 2131361967;
+			
 			// aapt resource value: 0x7f0a008e
 			public const int textView2 = 2131361934;
+			
+			// aapt resource value: 0x7f0a00b0
+			public const int textView20 = 2131361968;
 			
 			// aapt resource value: 0x7f0a008f
 			public const int textView3 = 2131361935;
@@ -2722,8 +2731,8 @@ namespace PokemonType
 			// aapt resource value: 0x7f0a0052
 			public const int title_template = 2131361874;
 			
-			// aapt resource value: 0x7f0a00b0
-			public const int toolbar = 2131361968;
+			// aapt resource value: 0x7f0a00b3
+			public const int toolbar = 2131361971;
 			
 			// aapt resource value: 0x7f0a001a
 			public const int top = 2131361818;
@@ -2968,13 +2977,19 @@ namespace PokemonType
 			public const int select_dialog_singlechoice_material = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int single_type_layout = 2130968631;
+			public const int select_type_layout = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int support_simple_spinner_dropdown_item = 2130968632;
+			public const int single_type_layout = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int toolbar_layout = 2130968633;
+			public const int support_simple_spinner_dropdown_item = 2130968633;
+			
+			// aapt resource value: 0x7f04003a
+			public const int team_type_layout = 2130968634;
+			
+			// aapt resource value: 0x7f04003b
+			public const int toolbar_layout = 2130968635;
 			
 			static Layout()
 			{

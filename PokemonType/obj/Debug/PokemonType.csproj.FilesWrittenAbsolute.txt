@@ -56,3 +56,5 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Clearcut.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.GooglePlayServices.Ads.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Design.dll
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/team_type_layout.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/select_type_layout.xml
