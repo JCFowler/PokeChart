@@ -9,7 +9,7 @@
 			android:title="Team Type"/>
 	</group>
 
-	<item android:title="Subs" >
+	<item android:title="Extras">
 		<menu>
 			<item
 				android:id="@+id/nav_language"

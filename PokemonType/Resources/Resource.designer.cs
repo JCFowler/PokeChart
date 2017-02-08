@@ -2170,22 +2170,19 @@ namespace PokemonType
 			public const int ic_language = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_menu = 2130837617;
-			
-			// aapt resource value: 0x7f020072
-			public const int navigation_empty_icon = 2130837618;
-			
-			// aapt resource value: 0x7f020076
-			public const int notification_template_icon_bg = 2130837622;
-			
-			// aapt resource value: 0x7f020073
-			public const int splash = 2130837619;
-			
-			// aapt resource value: 0x7f020074
-			public const int splash_screen = 2130837620;
+			public const int navigation_empty_icon = 2130837617;
 			
 			// aapt resource value: 0x7f020075
-			public const int types = 2130837621;
+			public const int notification_template_icon_bg = 2130837621;
+			
+			// aapt resource value: 0x7f020072
+			public const int splash = 2130837618;
+			
+			// aapt resource value: 0x7f020073
+			public const int splash_screen = 2130837619;
+			
+			// aapt resource value: 0x7f020074
+			public const int types = 2130837620;
 			
 			static Drawable()
 			{
@@ -3009,6 +3006,9 @@ namespace PokemonType
 			
 			// aapt resource value: 0x7f0d0001
 			public const int drawer_view = 2131558401;
+			
+			// aapt resource value: 0x7f0d0002
+			public const int japanese_action_toolbar = 2131558402;
 			
 			static Menu()
 			{

@@ -63,7 +63,21 @@ namespace PokemonType
 			{ "攻撃", "Attack"},
 			{ "Attack", "攻撃"},
 			{ "Team", "チーム"},
-			{ "チーム", "Team"}
+			{ "チーム", "Team"},
+
+
+			//Drawer Menu
+			{ "Single Type", "シングルタイプ"},
+			{ "シングルタイプ", "Single Type"},
+			{ "Team Type", "チームタイプ"},
+			{ "チームタイプ", "Team Type"},
+			{ "Extras", "他に"},
+			{ "他に", "Extras"},
+			{ "Change Language", "言語を変える"},
+			{ "言語を変える", "Change Language"},
+			{ "Help", "ヘルプ"},
+			{ "ヘルプ", "Help"}
+
 		};
 
 		public static void ConvertTextViews(List<LinearLayout> sentLayouts)

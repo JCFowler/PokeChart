@@ -38,21 +38,14 @@ namespace PokemonType
 		public SingleTypeFragment(StartActivity owner)
 		{
 			this.owner = owner;
-			if (SendData.isJapanese)
-			{
-				Convert.ConvertTextViews(layouts);
-
-				owner.Title = "防衛";
-			}
-			else
-				owner.Title = "Defense";
 		}
 
-		public override void OnCreate(Bundle savedInstanceState)
+		public override void OnResume()
 		{
-			base.OnCreate(savedInstanceState);
+			base.OnResume();
 
-			// Create your fragment here
+			leftSide.num = -1;
+			rightSide.num = -1;
 		}
 
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -66,6 +59,9 @@ namespace PokemonType
 			layouts = new List<LinearLayout> { layout1, layout2, layout3, mainLayout };
 			left = view.FindViewById<TextView>(Resource.Id.leftTop);
 			right = view.FindViewById<TextView>(Resource.Id.rightTop);
+			TextView leftTitle = view.FindViewById<TextView>(Resource.Id.leftTitle);
+			TextView middleTitle = view.FindViewById<TextView>(Resource.Id.middleTitle);
+			TextView rightTitle = view.FindViewById<TextView>(Resource.Id.rightTitle);
 			TextView textView1 = view.FindViewById<TextView>(Resource.Id.textView1);
 			TextView textView2 = view.FindViewById<TextView>(Resource.Id.textView2);
 			TextView textView3 = view.FindViewById<TextView>(Resource.Id.textView3);
@@ -88,14 +84,15 @@ namespace PokemonType
 			{ textView1, textView2, textView3, textView4, textView5, textView6, textView7, textView8, textView9, textView10,
 				textView11, textView12, textView13, textView14, textView15, textView16, textView17, textView18};
 
-			//if (SendData.isJapanese)
-			//{
-			//	Convert.ConvertTextViews(layouts);
-
-			//	SupportActionBar.Title = "防衛";
-			//}
-			//else
-			//	SupportActionBar.Title = "Defense";
+			if (SendData.isJapanese)
+			{
+				leftTitle.Text = Convert.LanguageDic[leftTitle.Text];
+				middleTitle.Text = Convert.LanguageDic[middleTitle.Text];
+				rightTitle.Text = Convert.LanguageDic[rightTitle.Text];
+				owner.Title = "防衛";
+			}
+			else
+				owner.Title = "Defense";
 
 			types = allTypes.defenseTypes;
 

@@ -31,6 +31,15 @@ namespace PokemonType
 				owner.Title = "Team";
 		}
 
+		public override void OnResume()
+		{
+			base.OnResume();
+			if (SendData.isJapanese)
+				owner.Title = "チーム";
+			else
+				owner.Title = "Team";
+		}
+
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			var view = inflater.Inflate(Resource.Layout.team_type_layout, container, false);

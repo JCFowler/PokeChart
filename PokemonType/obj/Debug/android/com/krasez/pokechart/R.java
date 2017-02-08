@@ -2808,12 +2808,11 @@ containing a value of this type.
         public static final int helpbutton=0x7f02006e;
         public static final int ic_help=0x7f02006f;
         public static final int ic_language=0x7f020070;
-        public static final int ic_menu=0x7f020071;
-        public static final int navigation_empty_icon=0x7f020072;
-        public static final int notification_template_icon_bg=0x7f020076;
-        public static final int splash=0x7f020073;
-        public static final int splash_screen=0x7f020074;
-        public static final int types=0x7f020075;
+        public static final int navigation_empty_icon=0x7f020071;
+        public static final int notification_template_icon_bg=0x7f020075;
+        public static final int splash=0x7f020072;
+        public static final int splash_screen=0x7f020073;
+        public static final int types=0x7f020074;
     }
     public static final class id {
         public static final int action0=0x7f0a00a2;
@@ -3079,6 +3078,7 @@ containing a value of this type.
     public static final class menu {
         public static final int action_toolbar=0x7f0d0000;
         public static final int drawer_view=0x7f0d0001;
+        public static final int japanese_action_toolbar=0x7f0d0002;
     }
     public static final class mipmap {
         public static final int ic_menu=0x7f030000;

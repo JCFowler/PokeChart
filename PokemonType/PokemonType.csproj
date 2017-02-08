@@ -158,9 +158,10 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\ic_menu.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\ic_menu.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_menu.png" />
-    <AndroidResource Include="Resources\drawable\ic_menu.png" />
     <AndroidResource Include="Resources\layout\team_type_layout.axml" />
     <AndroidResource Include="Resources\layout\select_type_layout.axml" />
+    <AndroidResource Include="Resources\Menu\japanese_action_toolbar.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_menu.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

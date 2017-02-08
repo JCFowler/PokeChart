@@ -58,3 +58,5 @@
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/bin/Debug/Xamarin.Android.Support.Design.dll
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/team_type_layout.xml
 /Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/layout/select_type_layout.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/menu/japanese_action_toolbar.xml
+/Users/johnfowler/Documents/BitBucket/pokemontype/PokemonType/obj/Debug/res/mipmap-hdpi/ic_menu.png
